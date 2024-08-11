@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { useRouter, RouterLink } from 'vue-router'
+import { momentsOf39, fetchRandomMomentsOf8 } from '@/services/conlliu-service';
 
 // Vue Routerのインスタンスを取得
 const router = useRouter();
+
+const randomMomentsOf8 = fetchRandomMomentsOf8();
 
 function navigateHome(event: MouseEvent) {
   event.preventDefault();
@@ -97,9 +100,9 @@ function navigateHome(event: MouseEvent) {
         </ul>
       </div>
       <!-- TODO: localization -->
-      <div class="col-sm-2 anchor">
+      <!-- <div class="col-sm-2 anchor">
         <a class="contact" href="#contact">Contact</a>
-      </div>
+      </div> -->
     </div>
   </nav>
   <!--end nav-->
@@ -185,26 +188,13 @@ function navigateHome(event: MouseEvent) {
 
       <div class="col-lg-4 col-md-12 order-2 order-lg-1 order-md-2 order-sm-2 products-left-outer">
         <div class="row products-left">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="1">
-              <img src="/Brutal/img/conlliu/1.gif" alt="" class="vertical-video-ratio object-fit-cover">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="2">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
-            </div>
-          </div>
-        </div>
-        <div class="row products-left">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="3">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="4">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
+          <div
+            v-for="moment in randomMomentsOf8.slice(0, 4)"
+            :key="`rand-moment-${moment.id}`"
+            class="col-6"
+          >
+            <div class="product-wrap" :data-product-id="moment.id">
+              <img :src="moment.image" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>
@@ -222,103 +212,33 @@ function navigateHome(event: MouseEvent) {
                 <h3>39 Divine Moments <br/>of Erecting the Ryūjin's Hokora</h3>
               </div>
 
-              <div id="product-1" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/conlliu/1.gif);">
-                  <div class="product-description">
-                      <h5>Moment #1</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-2" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
-                  <div class="product-description">
-                      <h5>Moment #2</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-3" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
-                  <div class="product-description">
-                      <h5>Moment #3</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-4" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
-                  <div class="product-description">
-                      <h5>Moment #4</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-5" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
-                  <div class="product-description">
-                      <h5>Moment #5</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-6" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
-                  <div class="product-description">
-                      <h5>Moment #6</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-7" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
-                  <div class="product-description">
-                      <h5>Moment #7</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-8" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
-                  <div class="product-description">
-                      <h5>Moment #8</h5>
-                      <a href="#" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
+            <div
+              v-for="moment in momentsOf39"
+              :key="`moment-${moment.id}`"
+              :id="`product-${moment.id}`"
+              class="product-carousel-item vertical-video-ratio object-fit-cover"
+              :style="`background-image: url(${moment.image});`"
+            >
+                <div class="product-description">
+                    <h5>Moment #{{ moment.id }}</h5>
+                    <a href="#" class="product-link">
+                        &rarr;
+                    </a>
+                </div>
+            </div>
 
           </div>
       </div>
 
       <div class="col-lg-4 col-md-12 order-3 products-right-outer">
         <div class="row products-right">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="5">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="6">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
-            </div>
-          </div>
-        </div>
-        <div class="row products-right">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="7">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="8">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
+          <div
+            v-for="moment in randomMomentsOf8.slice(4, 8)"
+            :key="`rand-moment-${moment.id}`"
+            class="col-6"
+          >
+            <div class="product-wrap" :data-product-id="moment.id">
+              <img :src="moment.image" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>
