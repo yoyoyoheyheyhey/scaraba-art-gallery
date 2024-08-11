@@ -54,12 +54,6 @@ function navigateHome(event: MouseEvent) {
         <span><img class="scaraba-typography" src="/Brutal/img/scaraba/typography-2-ka.svg" alt="CA" /></span>
         <span><img class="scaraba-typography" src="/Brutal/img/scaraba/typography-3-ra.svg" alt="RA" /></span>
         <span><img class="scaraba-typography" src="/Brutal/img/scaraba/typography-4-ba.svg" alt="BA" /></span>
-        <!-- <span>B</span>
-        <span>r</span>
-        <span>u</span>
-        <span>t</span>
-        <span>a</span>
-        <span>l</span> -->
       </p>
       <p>is loading</p>
     </div>
@@ -540,14 +534,9 @@ function navigateHome(event: MouseEvent) {
     <div id="contact" class="row elem-border">
       <div class="col-lg-2 col-md-12 order-2 order-lg-1 order-md-2 contact-left">
         <ul id="social">
-          <RouterLink to="https://www.instagram.com/scaraba_art_gallery/">
-            <template #default="{ href }">
-              <li><a :href="href" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            </template>
-          </RouterLink>
-          <!-- <li><a href="https://www.instagram.com/scaraba_art_gallery/" target="_blank" rel="noopener noreferrer">Instagram</a></li> -->
-          <li>_</li>
-          <li>_</li>
+          <li class="anchor"><a href="https://www.instagram.com/scaraba_art_gallery/" target="_blank" rel="noopener noreferrer" class="d-inline-block h-100 w-100">Instagram</a></li>
+          <li class="anchor">...</li>
+          <li class="anchor">...</li>
         </ul>
       </div>
       <!-- <div class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1 contact-right">
