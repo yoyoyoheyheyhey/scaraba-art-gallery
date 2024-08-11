@@ -1,12 +1,23 @@
 <script setup lang="ts">
-import { useRouter, RouterLink } from 'vue-router'
+import { ref } from 'vue';
+import { useRouter, RouterLink } from 'vue-router';
 import { momentsOf39, fetchRandomMomentsOf8 } from '@/services/conlliu-service';
+import { useI18n } from 'vue-i18n';
 import ScarabaModal from '@/components/ScarabaModal.vue';
 
 // Vue Routerのインスタンスを取得
 const router = useRouter();
 
 const randomMomentsOf8 = fetchRandomMomentsOf8();
+
+const { locale } = useI18n({ useScope: 'global' });
+
+const currentLocale = ref(locale.value);
+
+function changeLocale(newLocale: 'en' | 'ja') {
+  locale.value = newLocale;
+  currentLocale.value = newLocale;
+}
 
 function navigateHome(event: MouseEvent) {
   event.preventDefault();
@@ -17,7 +28,7 @@ function navigateHome(event: MouseEvent) {
 <template>
   <main>
   <!--preloader-->
-  <div class="preloader preloader-xl">
+  <!-- <div class="preloader preloader-xl">
     <div>
       <p class="loading-text">
         <span><img id="scaraba-logo" src="/Brutal/img/scaraba/SCARABA_logo.svg" alt="logo"></span>
@@ -28,7 +39,7 @@ function navigateHome(event: MouseEvent) {
       </p>
       <p>is loading</p>
     </div>
-  </div>
+  </div> -->
 
   <!--nav-->
   <nav class="container-fluid">
@@ -44,18 +55,19 @@ function navigateHome(event: MouseEvent) {
           </span>
         </div>
       </div>
-      <!-- <div class="col-sm-2 navigation"> -->
-      <div class="col-sm-4 navigation">
+      <div class="col-sm-2 navigation">
         <ul class="navlist">
-          <li class="anchor text-truncate"><RouterLink to="#featured-exhibition">Featured Exhibition</RouterLink></li>
-          <li class="anchor text-truncate"><RouterLink to="#about">We</RouterLink></li>
-          <li class="anchor text-truncate"><RouterLink to="#artists">Artists</RouterLink></li>
+          <li class="anchor text-truncate"><RouterLink to="#featured-exhibition">{{ $t('message.navList.featuredExhibition') }}</RouterLink></li>
+          <li class="anchor text-truncate"><RouterLink to="#about">{{ $t('message.navList.about') }}</RouterLink></li>
+          <li class="anchor text-truncate"><RouterLink to="#artists">{{ $t('message.navList.artists') }}</RouterLink></li>
         </ul>
       </div>
-      <!-- TODO: localization -->
-      <!-- <div class="col-sm-2 anchor">
-        <a class="contact" href="#contact">Contact</a>
-      </div> -->
+      <div class="col-sm-2 anchor  d-flex align-items-center justify-content-center">
+        <span class="contact d-flex align-items-center justify-content-center">
+          <a href="#" class="mr-2 ml-2" @click="changeLocale('ja')">JP</a>/
+          <a href="#" class="mr-2 ml-2" @click="changeLocale('en')">EN</a>
+        </span>
+      </div>
     </div>
   </nav>
   <!--end nav-->
@@ -70,7 +82,9 @@ function navigateHome(event: MouseEvent) {
         <h3 class="stretch-text text-transform-none"><span>Art Gallery</span></h3>
       </div>
       <div class="col-xl-8 col-lg-7 col-md-5 text-center d-flex justify-content-center align-items-center">
-        <p class="p-5 bg-black color-white fs-xl">We curate uncopyable art, discovering new meanings for entities onchain.<br />—SCARABA: where the unseen is manifested.</p>
+        <p class="p-5 bg-black color-white fs-xl">
+          {{ $t('message.tagline.line1') }}<br />{{ $t('message.tagline.line2') }}
+        </p>
       </div>
     </div><!--endtagline-->
 
@@ -92,7 +106,7 @@ function navigateHome(event: MouseEvent) {
       <div class="col-lg-6 col-md-12 order-1 order-lg-2 order-sm-1">
         <div class="row elem-border features-title">
           <div class="col-12">
-            <h3>Featured Exhibition</h3>
+            <h3>{{ $t('message.navList.featuredExhibition') }}</h3>
           </div>
         </div>
 
@@ -107,35 +121,35 @@ function navigateHome(event: MouseEvent) {
                 </div>
               </div>
               <div class="col-12">
-                <h4 class="text-transform-none">—A new digital mythology, forged at the frontier of NFTs.</h4>
-                <p>Conlliū transcends mere art creation; it infuses irreversible and uncopyable historical moments with the divine, intertwining them with unseen forces that culminated in the mythical erection of the Dragon God's sanctuary.</p>
+                <h4 class="text-transform-none">{{ $t('message.conlliu.subtitle') }}</h4>
+                <p>{{ $t('message.conlliu.subDesc') }}</p>
               </div>
               <div class="col-12 text-right">
                 <div class="btn-style-main">
                     <a href="#" data-toggle="modal" data-target="#about-conlliu">
-                    <span>Read more</span>
+                    <span>{{ $t('message.common.readMore') }}</span>
                   </a>
                 </div>
                 <ScarabaModal modal-id="about-conlliu">
                   <template #modal-title>
-                    <span class="text-transform-none">Conlliū</span>: A Ritualistic Convergence of Art and the Divine
+                    <span class="text-transform-none">Conlliū</span>: {{ $t('message.conlliu.desc.title') }}
                   </template>
 
                   <template #modal-body>
                     <section>
-                      <p>Through this ritualistic journey, each artwork in Conlliū becomes a nexus of physical finality and digital perpetuity, offering a window into the mystical interplay of forces that shape our perception of the sacred. More than mere artifacts, these pieces are portals to an era where the divine and mortal realms merge seamlessly.</p>
+                      <p>{{ $t('message.conlliu.desc.section1.p') }}</p>
                     </section>
                     <section>
-                      <h5>The Creation Process</h5>
-                      <p>The process begins with the physical act of creation, where Shinya Suzuki’s masterpieces are set aflame, marking the end of their physical form. In these fleeting moments of destruction, a spectacle unfolds, meticulously captured and reborn as digital artifacts on the blockchain. Each transformation is unique, preserving the final flash of existence as an uncopyable NFT.</p>
+                      <h5>{{ $t('message.conlliu.desc.section2.header') }}</h5>
+                      <p>{{ $t('message.conlliu.desc.section2.p') }}</p>
                     </section>
                     <section>
-                      <h5>Beyond Art: Witnesses to Transformation</h5>
-                      <p>These digital renditions transcend art; they are testimonies to time and transformation, eternal witnesses to the power and transience of creation. They reflect the cyclical nature of destruction and rebirth, offering a profound commentary on existence itself—challenging us to reconsider the boundaries between the ephemeral and the eternal.</p>
+                      <h5>{{ $t('message.conlliu.desc.section3.header') }}</h5>
+                      <p>{{ $t('message.conlliu.desc.section3.p') }}</p>
                     </section>
                     <section>
-                      <h5>Join the Journey</h5>
-                      <p>Join us in witnessing the convergence of art, technology, and spirituality in Conlliū—where every ember tells a story, and every story illuminates the path to the divine.</p>
+                      <h5>{{ $t('message.conlliu.desc.section4.header') }}</h5>
+                      <p>{{ $t('message.conlliu.desc.section4.p') }}</p>
                     </section>
                   </template>
                 </ScarabaModal>
@@ -167,13 +181,13 @@ function navigateHome(event: MouseEvent) {
       <div class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center products-center">
 
           <div class="products-title-mobile">
-            <h3>39 Divine Moments <br/>of Erecting the Ryūjin's Hokora</h3>
+            <h3>{{ $t('message.momentsOf39.header.line1') }}<br/>{{ $t('message.momentsOf39.header.line2') }}</h3>
           </div>
 
           <div class="products-carousel owl-carousel owl-theme">
 
               <div class="products-title-carousel d-flex justify-content-center align-items-center vertical-video-ratio object-fit-cover">
-                <h3>39 Divine Moments <br/>of Erecting the Ryūjin's Hokora</h3>
+                <h3>{{ $t('message.momentsOf39.header.line1') }}<br/>{{ $t('message.momentsOf39.header.line2') }}</h3>
               </div>
 
             <div
@@ -213,41 +227,41 @@ function navigateHome(event: MouseEvent) {
     <!--Roadmap-->
     <div id="prices" class="row elem-border">
       <div class="col-lg-2 prices-left">
-        <h3>Roadmap</h3>
+        <h3>{{ $t('message.roadmap.header') }}</h3>
       </div>
       <div class="col-lg-10">
         <div class="row prices-right">
           <div class="col-sm-4 col-12">
             <div class="prices-wrap">
               <h4>39<sup>&ast;</sup></h4>
-              <p>Daily Unveiling</p>
+              <p>{{ $t('message.roadmap.section1.subDesc') }}</p>
               <span>&larr;</span>
             </div>
             <div class="prices-details">
-              <h5>Capturing Ephemera:</h5>
-              <p>Each day, a unique moment of Conlliū is revealed in a preview of downscaled quality. Note: The actual NFTs are available in in high-resolution, capturing every detail of the mystical past, immortalized in digital form.</p>
+              <h5>{{ $t('message.roadmap.section1.header') }}</h5>
+              <p>{{ $t('message.roadmap.section1.desc') }}</p>
             </div>
           </div>
           <div class="col-sm-4 col-12">
             <div class="prices-wrap">
               <h4>1<sup>&dagger;</sup></h4>
-              <p>Final Reward</p>
+              <p>{{ $t('message.roadmap.section2.subDesc') }}</p>
               <span>&larr;</span>
             </div>
             <div class="prices-details">
-              <h5>The Complete Chronicle:</h5>
-              <p>Upon collecting all 39 moments, the sole collector is granted ownership of the full video NFT, presented in stunning 4K resolution. This unique testimony of the sacred ritual captures every detail with unparalleled clarity.</p>
+              <h5>{{ $t('message.roadmap.section2.header') }}</h5>
+              <p>{{ $t('message.roadmap.section2.desc') }}</p>
             </div>
           </div>
           <div class="col-sm-4 col-12">
             <div class="prices-wrap reveal-left">
               <h4>8<sup>&sect;</sup></h4>
-              <p>Diviner's Privilege</p>
+              <p>{{ $t('message.roadmap.section3.subDesc') }}</p>
               <span>&rarr;</span>
             </div>
             <div class="prices-details">
-              <h5>Early Access Elite:</h5>
-              <p>Eight select 'Diviners' receive early access, securing their part in this digital mythology before public release. Stay tuned for further updates.</p>
+              <h5>{{ $t('message.roadmap.section3.header') }}</h5>
+              <p>{{ $t('message.roadmap.section3.desc') }}</p>
             </div>
           </div>
         </div>
@@ -288,7 +302,7 @@ function navigateHome(event: MouseEvent) {
         </div>
       </div>
       <div class="col-lg-4 order-1 order-lg-2 gallery-right">
-        <h3>Mysteries<br/> <span class="text-transform-none">of</span><br/> <span class="text-transform-none">Conlliū</span></h3>
+        <h3>{{ $t('message.mysteries.header.line1') }}<br/> <span class="text-transform-none">{{ $t('message.mysteries.header.line2') }}</span><br/> <span class="text-transform-none">{{ $t('message.mysteries.header.line3') }}</span></h3>
       </div>
     </div><!--end Mysteries of Conlliu-->
 
@@ -298,29 +312,29 @@ function navigateHome(event: MouseEvent) {
         <div class="row elem-border services-left">
           <div class="col-lg-12 col-sm-6 col-6">
             <h4>We<br/> Curate</h4>
-            <p>We summon art that eludes replication, timeless yet transient.</p>
+            <p>{{ $t('message.we.curate') }}</p>
             <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
           <div class="col-lg-12 col-sm-6 col-6">
             <h4>We<br/> Discover</h4>
-            <p>We trace the unseen depths of NFTs, reshaping perceptions.</p>
+            <p>{{ $t('message.we.discover') }}</p>
             <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center services-center">
-        <h3>We</h3>
+        <h3>{{ $t('message.navList.about') }}</h3>
       </div>
       <div class="col-lg-4 col-md-12 order-3">
         <div class="row elem-border services-right">
           <div class="col-lg-12 col-sm-6 col-6">
             <h4>We<br/> Manifest</h4>
-            <p>We unveil hidden symmetries, illuminating the obscured.</p>
+            <p>{{ $t('message.we.manifest') }}</p>
             <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
           <div class="col-lg-12 col-sm-6 col-6">
             <h4>We<br/> Empower</h4>
-            <p>We elevate spirits, guiding souls to ethereal realms.</p>
+            <p>{{ $t('message.we.empower') }}</p>
             <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
         </div>
@@ -331,7 +345,7 @@ function navigateHome(event: MouseEvent) {
     <!--artists-->
     <div id="artists" class="row elem-border">
       <div class="col-lg-3 col-md-12 team-left">
-        <h3>Artists</h3>
+        <h3>{{ $t('message.navList.artists') }}</h3>
       </div>
       <div class="team-carousel-wrap col-lg-9 col-md-12">
         <div class="team-carousel owl-carousel owl-theme">
