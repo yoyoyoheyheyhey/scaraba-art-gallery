@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter, RouterLink } from 'vue-router'
 import { momentsOf39, fetchRandomMomentsOf8 } from '@/services/conlliu-service';
+import ScarabaModal from '@/components/ScarabaModal.vue';
 
 // Vue Routerのインスタンスを取得
 const router = useRouter();
@@ -15,39 +16,6 @@ function navigateHome(event: MouseEvent) {
 
 <template>
   <main>
-	<!--Modal-->
-  <div class="modal fade template-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <!--Modal header-->
-        <div class="modal-header">
-
-          <!--Modal title-->
-          <h5 class="modal-title">This is the modal title.</h5>
-
-          <!--Modal close-->
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div><!--end modal header-->
-
-        <!--Modal body-->
-        <div class="modal-body">
-          <h6>Brutalist Websites.</h6>
-          <p>In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design.</p>
-        </div><!--End modal body-->
-
-        <!--Modal footer-->
-        <div class="modal-footer text-center">
-          <p>This is the modal footer.</p>
-        </div><!--end modal footer-->
-
-      </div><!--end modal content-->
-    </div>
-  </div><!--end modal-->
-
-
   <!--preloader-->
   <div class="preloader preloader-xl">
     <div>
@@ -75,22 +43,6 @@ function navigateHome(event: MouseEvent) {
             <img class="scaraba-typography" src="/Brutal/img/scaraba/typography-4-ba.svg" alt="BA">
           </span>
         </div>
-        <!-- <h1 class="stretch-text">
-          <a href="/">
-            <span class="stretch_it">BRUTAL</span>
-          </a>
-        </h1> -->
-
-        <!-- <h1 class="stretch-text">
-          <span class="stretch_it">BRUTAL</span>
-          <span class="stretch_it">
-            <img src="/Brutal/img/scaraba/SCARABA_logo.svg" alt="logo" width="120" height="120">
-            <img src="/Brutal/img/scaraba/typography-1-su.svg" alt="S" width="120" height="120">
-            <img src="/Brutal/img/scaraba/typography-2-ka.svg" alt="CA" width="120" height="120">
-            <img src="/Brutal/img/scaraba/typography-3-ra.svg" alt="RA" width="120" height="120">
-            <img src="/Brutal/img/scaraba/typography-4-ba.svg" alt="BA" width="120" height="120">
-          </span>
-        </h1> -->
       </div>
       <div class="col-sm-2 navigation">
         <ul class="navlist">
@@ -110,8 +62,6 @@ function navigateHome(event: MouseEvent) {
 
   <!--main-->
   <div class="container-fluid">
-
-
     <!--tagline-->
     <div id="hero" class="row elem-border">
       <div class="col-xl-4 col-lg-5 col-md-7">
@@ -161,20 +111,33 @@ function navigateHome(event: MouseEvent) {
               </div>
               <div class="col-12 text-right">
                 <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-modal">
+                    <a href="#" data-toggle="modal" data-target="#about-conlliu">
                     <span>Read more</span>
-                    <!--
-                    # TODO: MODAL
-                    Through this ritualistic journey, each artwork in Conlliū becomes a nexus of physical finality and digital perpetuity, offering a window into the mystical interplay of forces that shape our perception of the sacred. More than mere artifacts, these pieces are portals to an era where the divine and mortal realms merge seamlessly.
-
-                    The process begins with the physical act of creation, where Shinya Suzuki’s masterpieces are set aflame, marking the end of their physical form. In these fleeting moments of destruction, a spectacle unfolds, meticulously captured and reborn as digital artifacts on the blockchain. Each transformation is unique, preserving the final flash of existence as an uncopyable NFT.
-
-                    These digital renditions transcend art; they are testimonies to time and transformation, eternal witnesses to the power and transience of creation. They reflect the cyclical nature of destruction and rebirth, offering a profound commentary on existence itself—challenging us to reconsider the boundaries between the ephemeral and the eternal.
-
-                    Join us in witnessing the convergence of art, technology, and spirituality in Conlliū—where every ember tells a story, and every story illuminates the path to the divine.
-                    -->
                   </a>
                 </div>
+                <ScarabaModal modal-id="about-conlliu">
+                  <template #modal-title>
+                    <span class="text-transform-none">Conlliū</span>: A Ritualistic Convergence of Art and the Divine
+                  </template>
+
+                  <template #modal-body>
+                    <section>
+                      <p>Through this ritualistic journey, each artwork in Conlliū becomes a nexus of physical finality and digital perpetuity, offering a window into the mystical interplay of forces that shape our perception of the sacred. More than mere artifacts, these pieces are portals to an era where the divine and mortal realms merge seamlessly.</p>
+                    </section>
+                    <section>
+                      <h5>The Creation Process</h5>
+                      <p>The process begins with the physical act of creation, where Shinya Suzuki’s masterpieces are set aflame, marking the end of their physical form. In these fleeting moments of destruction, a spectacle unfolds, meticulously captured and reborn as digital artifacts on the blockchain. Each transformation is unique, preserving the final flash of existence as an uncopyable NFT.</p>
+                    </section>
+                    <section>
+                      <h5>Beyond Art: Witnesses to Transformation</h5>
+                      <p>These digital renditions transcend art; they are testimonies to time and transformation, eternal witnesses to the power and transience of creation. They reflect the cyclical nature of destruction and rebirth, offering a profound commentary on existence itself—challenging us to reconsider the boundaries between the ephemeral and the eternal.</p>
+                    </section>
+                    <section>
+                      <h5>Join the Journey</h5>
+                      <p>Join us in witnessing the convergence of art, technology, and spirituality in Conlliū—where every ember tells a story, and every story illuminates the path to the divine.</p>
+                    </section>
+                  </template>
+                </ScarabaModal>
               </div>
             </div>
           </div>
