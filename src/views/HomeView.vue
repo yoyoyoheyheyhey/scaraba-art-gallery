@@ -44,7 +44,8 @@ function navigateHome(event: MouseEvent) {
           </span>
         </div>
       </div>
-      <div class="col-sm-2 navigation">
+      <!-- <div class="col-sm-2 navigation"> -->
+      <div class="col-sm-4 navigation">
         <ul class="navlist">
           <li class="anchor text-truncate"><RouterLink to="#featured-exhibition">Featured Exhibition</RouterLink></li>
           <li class="anchor text-truncate"><RouterLink to="#about">We</RouterLink></li>
