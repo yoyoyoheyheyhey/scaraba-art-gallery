@@ -28,7 +28,7 @@ function navigateHome(event: MouseEvent) {
 <template>
   <main>
   <!--preloader-->
-  <!-- <div class="preloader preloader-xl">
+  <div class="preloader preloader-xl">
     <div>
       <p class="loading-text">
         <span><img id="scaraba-logo" src="/Brutal/img/scaraba/SCARABA_logo.svg" alt="logo"></span>
@@ -39,7 +39,7 @@ function navigateHome(event: MouseEvent) {
       </p>
       <p>is loading</p>
     </div>
-  </div> -->
+  </div>
 
   <!--nav-->
   <nav class="container-fluid">
