@@ -5,7 +5,7 @@ import { ja } from './ja';
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'ja',
+  locale: 'en',
   fallbackLocale: 'en',
   messages:{
     en: { message: en },
