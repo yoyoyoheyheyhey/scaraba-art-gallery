@@ -414,7 +414,7 @@ function navigateHome(event: MouseEvent) {
 
 
     <!--Contact-->
-    <div id="contact" class="row elem-border">
+    <!-- <div id="contact" class="row elem-border">
       <div class="col-lg-2 col-md-12 order-2 order-lg-1 order-md-2 contact-left">
         <ul id="social">
           <li class="anchor"><a href="https://www.instagram.com/scaraba_art_gallery/" target="_blank" rel="noopener noreferrer" class="d-inline-block h-100 w-100">Instagram</a></li>
@@ -422,7 +422,7 @@ function navigateHome(event: MouseEvent) {
           <li class="anchor">...</li>
         </ul>
       </div>
-      <!-- <div class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1 contact-right">
+      <div class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1 contact-right">
         <div class="row">
           <div class="col-md-3 col-sm-12 contact-title">
             <h3>There<br/> is a<br/> Form</h3>
@@ -447,8 +447,8 @@ function navigateHome(event: MouseEvent) {
             </form>
           </div>
         </div>
-      </div> -->
-    </div>
+      </div>
+    </div> -->
     <!--end contact-->
 
   </div><!--end main-->
