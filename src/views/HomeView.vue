@@ -49,12 +49,17 @@ function navigateHome(event: MouseEvent) {
   <div class="preloader preloader-xl">
     <div>
       <p class="loading-text">
-        <span>B</span>
+        <span><img id="scaraba-logo" src="/Brutal/img/scaraba/SCARABA_logo.svg" alt="logo"></span>
+        <span><img class="scaraba-typography" src="/Brutal/img/scaraba/typography-1-su.svg" alt="S" /></span>
+        <span><img class="scaraba-typography" src="/Brutal/img/scaraba/typography-2-ka.svg" alt="CA" /></span>
+        <span><img class="scaraba-typography" src="/Brutal/img/scaraba/typography-3-ra.svg" alt="RA" /></span>
+        <span><img class="scaraba-typography" src="/Brutal/img/scaraba/typography-4-ba.svg" alt="BA" /></span>
+        <!-- <span>B</span>
         <span>r</span>
         <span>u</span>
         <span>t</span>
         <span>a</span>
-        <span>l</span>
+        <span>l</span> -->
       </p>
       <p>is loading</p>
     </div>
@@ -64,11 +69,31 @@ function navigateHome(event: MouseEvent) {
   <nav class="container-fluid">
     <div class="row elem-border">
       <div class="col-sm-8 anchor brand" @click="navigateHome">
-        <h1 class="stretch-text">
+        <div id="scaraba-brand" class="d-flex justify-content-between align-items-center h-100">
+          <img id="scaraba-logo" src="/Brutal/img/scaraba/SCARABA_logo.svg" alt="logo">
+          <span class="d-flex justify-content-around align-items-center h-100 w-100">
+            <img class="scaraba-typography" src="/Brutal/img/scaraba/typography-1-su.svg" alt="S">
+            <img class="scaraba-typography" src="/Brutal/img/scaraba/typography-2-ka.svg" alt="CA">
+            <img class="scaraba-typography" src="/Brutal/img/scaraba/typography-3-ra.svg" alt="RA">
+            <img class="scaraba-typography" src="/Brutal/img/scaraba/typography-4-ba.svg" alt="BA">
+          </span>
+        </div>
+        <!-- <h1 class="stretch-text">
           <a href="/">
             <span class="stretch_it">BRUTAL</span>
           </a>
-        </h1>
+        </h1> -->
+
+        <!-- <h1 class="stretch-text">
+          <span class="stretch_it">BRUTAL</span>
+          <span class="stretch_it">
+            <img src="/Brutal/img/scaraba/SCARABA_logo.svg" alt="logo" width="120" height="120">
+            <img src="/Brutal/img/scaraba/typography-1-su.svg" alt="S" width="120" height="120">
+            <img src="/Brutal/img/scaraba/typography-2-ka.svg" alt="CA" width="120" height="120">
+            <img src="/Brutal/img/scaraba/typography-3-ra.svg" alt="RA" width="120" height="120">
+            <img src="/Brutal/img/scaraba/typography-4-ba.svg" alt="BA" width="120" height="120">
+          </span>
+        </h1> -->
       </div>
       <div class="col-sm-2 navigation">
         <ul class="navlist">
@@ -559,6 +584,20 @@ function navigateHome(event: MouseEvent) {
 </template>
 
 <style scoped>
+#scaraba-brand:hover img {
+  filter: invert(1);
+}
+#scaraba-logo {
+  width: 16%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.scaraba-typography {
+  width: 12%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
 .text-transform-none {
   text-transform: none !important;
 }

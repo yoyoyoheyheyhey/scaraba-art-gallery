@@ -10756,8 +10756,10 @@ div.preloader {
     position: relative;
     left: -2px; }
     div.preloader p span {
+      display: none;
       color: #fff; }
       div.preloader p span.load-letter {
+        display: inline;
         color: #000; }
     div.preloader p + p {
       font-size: 1em;
