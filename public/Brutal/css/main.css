@@ -17,13 +17,13 @@
  * 9. Anchors
  * 10. Navigation | nav
  * 11. Fullscreen Hero section | #hero
- * 12. Features | #features
- * 13. Services | #services
+ * 12. Features | #featured-exhibition
+ * 13. Services | #about
  * 14. Pricing | #pricing
  * 15. Gallery | #gallery
  * 16. Video | #video
  * 17. Products | #products
- * 18. Team | #team
+ * 18. Team | #artists
  * 19. Contact | #contact
  * 20. Preloader | .preloader
  * 21. Footer | footer
@@ -42,6 +42,10 @@
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,900");
+h1, h2, h3, h4, h5, p, span, label, button, li, a, input, textarea, .owl-nav > div{
+  font-family: 'Titillium Web', sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -9231,148 +9235,148 @@ div#hero button, div#hero a.cta {
 
 /*!
  * [Features section - Table of contents]
- * 1. Wrapper | #features
+ * 1. Wrapper | #featured-exhibition
  * 2. Title | .features-title
  * 3. Left column | .features-left
  * 4. Right column | .features-right
  */
-div#features {
+div#featured-exhibition {
   border-bottom: solid 1px #000; }
   @media (max-width: 575.98px) {
-    div#features {
+    div#featured-exhibition {
       border-bottom: transparent; } }
-  div#features h3 {
+  div#featured-exhibition h3 {
     line-height: 90px;
     height: 90px; }
     @media (max-width: 991.98px) {
-      div#features h3 {
+      div#featured-exhibition h3 {
         line-height: 1.2;
         text-align: center;
         width: 100%;
         padding: 30px 0;
         height: auto; } }
-  div#features:hover .features-title > div {
+  div#featured-exhibition:hover .features-title > div {
     background: #000; }
-    div#features:hover .features-title > div h3 {
+    div#featured-exhibition:hover .features-title > div h3 {
       color: #fff; }
-  div#features div.features-left.features-left > div.elem-border > div:hover .btn-style-main, div#features div.features-right.features-left > div.elem-border > div:hover .btn-style-main {
+  div#featured-exhibition div.features-left.features-left > div.elem-border > div:hover .btn-style-main, div#featured-exhibition div.features-right.features-left > div.elem-border > div:hover .btn-style-main {
     outline: solid 1px #000; }
-    div#features div.features-left.features-left > div.elem-border > div:hover .btn-style-main a, div#features div.features-right.features-left > div.elem-border > div:hover .btn-style-main a {
+    div#featured-exhibition div.features-left.features-left > div.elem-border > div:hover .btn-style-main a, div#featured-exhibition div.features-right.features-left > div.elem-border > div:hover .btn-style-main a {
       outline: solid 1px #000; }
-  div#features div.features-left.features-right > div:hover .btn-style-main, div#features div.features-right.features-right > div:hover .btn-style-main {
+  div#featured-exhibition div.features-left.features-right > div:hover .btn-style-main, div#featured-exhibition div.features-right.features-right > div:hover .btn-style-main {
     outline: solid 1px #000; }
-    div#features div.features-left.features-right > div:hover .btn-style-main a, div#features div.features-right.features-right > div:hover .btn-style-main a {
+    div#featured-exhibition div.features-left.features-right > div:hover .btn-style-main a, div#featured-exhibition div.features-right.features-right > div:hover .btn-style-main a {
       outline: solid 1px #000; }
-  div#features div.features-left h4, div#features div.features-right h4 {
+  div#featured-exhibition div.features-left h4, div#featured-exhibition div.features-right h4 {
     display: block;
     margin-bottom: 15px; }
-  div#features div.features-left > .row.elem-border {
+  div#featured-exhibition div.features-left > .row.elem-border {
     height: 100%; }
-  div#features div.features-left .btn-style-main {
+  div#featured-exhibition div.features-left .btn-style-main {
     margin-top: 9px; }
     @media (max-width: 767.98px) {
-      div#features div.features-left .btn-style-main {
+      div#featured-exhibition div.features-left .btn-style-main {
         margin-top: 0; } }
   @media (max-width: 991.98px) {
-    div#features div.features-left > .row {
+    div#featured-exhibition div.features-left > .row {
       height: auto; } }
-  div#features div.features-left > .row > div {
+  div#featured-exhibition div.features-left > .row > div {
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: transparent;
     border-right: transparent; }
-    div#features div.features-left > .row > div + div {
+    div#featured-exhibition div.features-left > .row > div + div {
       border-left: solid 1px #000; }
     @media (max-width: 991.98px) {
-      div#features div.features-left > .row > div {
+      div#featured-exhibition div.features-left > .row > div {
         border: solid 1px #000;
         border-bottom: transparent; }
-        div#features div.features-left > .row > div + div {
+        div#featured-exhibition div.features-left > .row > div + div {
           border-left: transparent; }
-        div#features div.features-left > .row > div p {
+        div#featured-exhibition div.features-left > .row > div p {
           margin-bottom: 30px; } }
     @media (max-width: 575.98px) {
-      div#features div.features-left > .row > div {
+      div#featured-exhibition div.features-left > .row > div {
         border-left: transparent;
         border-right: transparent; }
-        div#features div.features-left > .row > div + div {
+        div#featured-exhibition div.features-left > .row > div + div {
           border-left: transparent; } }
-    div#features div.features-left > .row > div:hover {
+    div#featured-exhibition div.features-left > .row > div:hover {
       cursor: pointer;
       cursor: unset; }
-      div#features div.features-left > .row > div:hover a:after {
+      div#featured-exhibition div.features-left > .row > div:hover a:after {
         left: 100%; }
-  div#features div.features-right {
+  div#featured-exhibition div.features-right {
     height: 86%;
     height: calc(100% - 92px); }
     @media (max-width: 991.98px) {
-      div#features div.features-right {
+      div#featured-exhibition div.features-right {
         height: auto; } }
     @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-      div#features div.features-right {
+      div#featured-exhibition div.features-right {
         height: calc(100% - 92px); } }
-    div#features div.features-right > div {
+    div#featured-exhibition div.features-right > div {
       position: relative;
       padding-top: 30px;
       padding-bottom: 30px;
       border-top: transparent;
       border-bottom: transparent; }
       @media (max-width: 767.98px) {
-        div#features div.features-right > div {
+        div#featured-exhibition div.features-right > div {
           border-bottom: solid 1px #000; } }
       @media (max-width: 575.98px) {
-        div#features div.features-right > div {
+        div#featured-exhibition div.features-right > div {
           border-left: transparent;
           border-right: transparent; }
-          div#features div.features-right > div:last-child {
+          div#featured-exhibition div.features-right > div:last-child {
             border-bottom: transparent; } }
-      div#features div.features-right > div p {
+      div#featured-exhibition div.features-right > div p {
         margin-bottom: 30px; }
-        div#features div.features-right > div p span {
+        div#featured-exhibition div.features-right > div p span {
           display: none; }
           @media (max-width: 575.98px) {
-            div#features div.features-right > div p span {
+            div#featured-exhibition div.features-right > div p span {
               display: inline-block; } }
-      div#features div.features-right > div .btn-style-main {
+      div#featured-exhibition div.features-right > div .btn-style-main {
         margin-top: 0; }
       @media (max-width: 320px) {
-        div#features div.features-right > div:last-child {
+        div#featured-exhibition div.features-right > div:last-child {
           border-bottom: transparent; } }
 
 /*!
  * [Services section - Table of contents]
- * 1. Wrapper | #services
+ * 1. Wrapper | #about
  * 2. Left column | .services-left
  * 3. Center column | .services-center
  * 4. Right column | .services-right
  */
-div#services {
+div#about {
   height: auto; }
   @media (max-width: 991.98px) {
-    div#services {
+    div#about {
       height: auto; } }
-  div#services div.services-center {
+  div#about div.services-center {
     position: relative;
     border-bottom: solid 1px #000;
     border-right: solid 1px #000; }
     @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-      div#services div.services-center {
+      div#about div.services-center {
         border-right: transparent; } }
     @media (max-width: 991.98px) {
-      div#services div.services-center {
+      div#about div.services-center {
         border-top: solid 1px #000;
         border-left: solid 1px #000;
         border-right: solid 1px #000;
         border-bottom: transparent; } }
     @media (max-width: 767.98px) {
-      div#services div.services-center {
+      div#about div.services-center {
         border-right: transparent;
         border-left: transparent; } }
     @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
-      div#services div.services-center {
+      div#about div.services-center {
         border-right: solid 1px #000; } }
-  div#services h3 {
+  div#about h3 {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -9381,7 +9385,7 @@ div#services {
     left: 0;
     width: 100%; }
     @media (max-width: 991.98px) {
-      div#services h3 {
+      div#about h3 {
         position: relative;
         top: initial;
         left: initial;
@@ -9390,33 +9394,33 @@ div#services {
         -webkit-transform: none;
         transform: none;
         padding: 30px 0; }
-        div#services h3 br {
+        div#about h3 br {
           display: none; } }
-  div#services:hover .services-center {
+  div#about:hover .services-center {
     background: #000; }
-    div#services:hover .services-center h3 {
+    div#about:hover .services-center h3 {
       color: #fff; }
-  div#services > div {
+  div#about > div {
     border-top: solid 1px #000; }
     @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-      div#services > div {
+      div#about > div {
         border-top: transparent; } }
     @media (max-width: 767.98px) {
-      div#services > div {
+      div#about > div {
         border-top: transparent; } }
-  div#services h4 {
+  div#about h4 {
     display: block;
     margin-bottom: 15px; }
-    div#services h4 br {
+    div#about h4 br {
       display: none; }
       @media (max-width: 575.98px) {
-        div#services h4 br {
+        div#about h4 br {
           display: block; } }
-  div#services a {
+  div#about a {
     position: relative;
     display: inline-block;
     overflow: hidden; }
-    div#services a:after {
+    div#about a:after {
       content: '';
       position: absolute;
       bottom: 0px;
@@ -9426,52 +9430,52 @@ div#services {
       background: #000;
       -webkit-transition: left 0.3s ease-in-out;
       transition: left 0.3s ease-in-out; }
-  div#services p {
+  div#about p {
     margin-bottom: 30px;
     width: 50%; }
     @media (min-width: 768px) and (max-width: 1024px) {
-      div#services p {
+      div#about p {
         width: 65%; } }
     @media (max-width: 767.98px) {
-      div#services p {
+      div#about p {
         width: 100%; } }
   @media (max-width: 991.98px) {
-    div#services div.services-left, div#services div.services-right {
+    div#about div.services-left, div#about div.services-right {
       height: auto; } }
-  div#services div.services-left > div, div#services div.services-right > div {
+  div#about div.services-left > div, div#about div.services-right > div {
     cursor: pointer;
     border-top: transparent;
     border-left: solid 1px #000;
     padding-top: 30px;
     padding-bottom: 30px; }
     @media (max-width: 991.98px) {
-      div#services div.services-left > div, div#services div.services-right > div {
+      div#about div.services-left > div, div#about div.services-right > div {
         border-bottom: transparent;
         border-top: solid 1px #000;
         border-right: solid 1px #000;
         border-right-width: 0.5px; }
-        div#services div.services-left > div:last-child, div#services div.services-right > div:last-child {
+        div#about div.services-left > div:last-child, div#about div.services-right > div:last-child {
           border-left-width: 0.5px;
           border-right-width: 1px; } }
     @media (max-width: 767.98px) {
-      div#services div.services-left > div, div#services div.services-right > div {
+      div#about div.services-left > div, div#about div.services-right > div {
         border-bottom: transparent;
         border-left: transparent;
         border-top: solid 1px #000;
         border-right: solid 1px #000;
         border-right-width: 0.5px; }
-        div#services div.services-left > div:last-child, div#services div.services-right > div:last-child {
+        div#about div.services-left > div:last-child, div#about div.services-right > div:last-child {
           border-left: solid 1px #000;
           border-left-width: 0.5px;
           border-right: transparent; } }
     @media (max-width: 320px) {
-      div#services div.services-left > div, div#services div.services-right > div {
+      div#about div.services-left > div, div#about div.services-right > div {
         border-right: transparent;
         border-left: transparent; }
-        div#services div.services-left > div:last-child, div#services div.services-right > div:last-child {
+        div#about div.services-left > div:last-child, div#about div.services-right > div:last-child {
           border-left: transparent; } }
     @media (max-width: 320px) {
-      div#services div.services-left > div, div#services div.services-right > div {
+      div#about div.services-left > div, div#about div.services-right > div {
         display: block !important;
         width: 100%;
         max-width: none;
@@ -9479,30 +9483,30 @@ div#services {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%; } }
     @media (max-width: 991.98px) {
-      div#services div.services-left > div h4, div#services div.services-right > div h4 {
+      div#about div.services-left > div h4, div#about div.services-right > div h4 {
         height: auto;
         line-height: 45px; } }
-    div#services div.services-left > div:hover, div#services div.services-right > div:hover {
+    div#about div.services-left > div:hover, div#about div.services-right > div:hover {
       cursor: pointer;
       cursor: unset; }
-      div#services div.services-left > div:hover a:after, div#services div.services-right > div:hover a:after {
+      div#about div.services-left > div:hover a:after, div#about div.services-right > div:hover a:after {
         left: 100%; }
-  div#services div.services-right > div {
+  div#about div.services-right > div {
     border-left: transparent; }
     @media (max-width: 991.98px) {
-      div#services div.services-right > div {
+      div#about div.services-right > div {
         border-left: solid 1px #000; }
-        div#services div.services-right > div:last-child {
+        div#about div.services-right > div:last-child {
           border-right-width: 1px;
           border-left-width: 0.5px; } }
     @media (max-width: 767.98px) {
-      div#services div.services-right > div {
+      div#about div.services-right > div {
         border-left: transparent; }
-        div#services div.services-right > div:last-child {
+        div#about div.services-right > div:last-child {
           border-right-width: 1px;
           border-left-width: 0.5px; } }
     @media (max-width: 320px) {
-      div#services div.services-right > div {
+      div#about div.services-right > div {
         border-right: transparent;
         border-left: transparent; } }
 
@@ -10214,8 +10218,8 @@ div#products {
       div#products div.products-carousel {
         border-top: solid 1px #000; } }
     div#products div.products-carousel, div#products div.products-carousel .owl-stage-outer, div#products div.products-carousel .owl-stage, div#products div.products-carousel .owl-item, div#products div.products-carousel .product-carousel-item {
-      height: 100%; }
-      @media (max-width: 767px) {
+      max-height: 100%; }
+      /* @media (max-width: 767px) {
         div#products div.products-carousel, div#products div.products-carousel .owl-stage-outer, div#products div.products-carousel .owl-stage, div#products div.products-carousel .owl-item, div#products div.products-carousel .product-carousel-item {
           height: 400px; } }
       @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -10223,7 +10227,7 @@ div#products {
           height: 450px; } }
       @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
         div#products div.products-carousel, div#products div.products-carousel .owl-stage-outer, div#products div.products-carousel .owl-stage, div#products div.products-carousel .owl-item, div#products div.products-carousel .product-carousel-item {
-          height: 100%; } }
+          height: 100%; } } */
     div#products div.products-carousel div.product-carousel-item {
       position: relative;
       background-color: #fff;
@@ -10320,17 +10324,17 @@ div#products {
 
 /*!
  * [Team section - Table of contents]
- * 1. Wrapper | #team
+ * 1. Wrapper | #artists
  * 2. Left column | .team-left
  * 3. Content wrapper | .team-member
  * 4. Content container | .team-wrap
  */
-div#team {
+div#artists {
   height: auto; }
   @media (max-width: 991.98px) {
-    div#team {
+    div#artists {
       height: auto; } }
-  div#team h3 {
+  div#artists h3 {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -10340,7 +10344,7 @@ div#team {
     width: 100%;
     text-align: center; }
     @media (max-width: 991.98px) {
-      div#team h3 {
+      div#artists h3 {
         position: relative;
         top: initial;
         left: initial;
@@ -10349,70 +10353,70 @@ div#team {
         -webkit-transform: none;
         transform: none;
         padding: 30px 0; }
-        div#team h3 br {
+        div#artists h3 br {
           display: none; } }
-  div#team > div {
+  div#artists > div {
     border-top: transparent; }
     @media (max-width: 991.98px) {
-      div#team > div {
+      div#artists > div {
         border: none;
         border-top: solid 1px #000; } }
-  div#team:hover .team-left {
+  div#artists:hover .team-left {
     background: #000; }
-    div#team:hover .team-left h3 {
+    div#artists:hover .team-left h3 {
       color: #fff; }
-  div#team div.team-left {
+  div#artists div.team-left {
     position: relative;
     border-right: transparent; }
     @media (min-width: 768px) and (max-width: 991.98px) {
-      div#team div.team-left {
+      div#artists div.team-left {
         border-left: solid 1px #000;
         border-right: solid 1px #000; } }
-  div#team div.team-carousel-wrap {
+  div#artists div.team-carousel-wrap {
     padding: 0; }
     @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-      div#team div.team-carousel-wrap {
+      div#artists div.team-carousel-wrap {
         border-right: solid 1px #000; } }
-    div#team div.team-carousel-wrap div.team-carousel-nav {
+    div#artists div.team-carousel-wrap div.team-carousel-nav {
       height: 60px;
       position: relative;
       border-top: solid 1px #000;
       border-left: solid 1px #000; }
-    div#team div.team-carousel-wrap div.team-carousel .owl-nav {
+    div#artists div.team-carousel-wrap div.team-carousel .owl-nav {
       position: absolute;
       bottom: -60px;
       width: 100%;
       margin: 0; }
-      div#team div.team-carousel-wrap div.team-carousel .owl-nav > div {
+      div#artists div.team-carousel-wrap div.team-carousel .owl-nav > div {
         background: transparent;
         margin: 0;
         padding: 0 15px;
         border-radius: 0; }
-        div#team div.team-carousel-wrap div.team-carousel .owl-nav > div > span {
+        div#artists div.team-carousel-wrap div.team-carousel .owl-nav > div > span {
           font-size: 30px;
           line-height: 60px;
           color: #000; }
-        div#team div.team-carousel-wrap div.team-carousel .owl-nav > div:hover {
+        div#artists div.team-carousel-wrap div.team-carousel .owl-nav > div:hover {
           background: #000 !important; }
-          div#team div.team-carousel-wrap div.team-carousel .owl-nav > div:hover span {
+          div#artists div.team-carousel-wrap div.team-carousel .owl-nav > div:hover span {
             color: #fff; }
-  div#team div.team-member {
+  div#artists div.team-member {
     border-left: solid 1px #000; }
     @media (min-width: 768px) and (max-width: 991.98px) {
-      div#team div.team-member:last-child {
+      div#artists div.team-member:last-child {
         border-right: solid 1px #000; } }
     @media (max-width: 767px) {
-      div#team div.team-member {
+      div#artists div.team-member {
         border-left: none; } }
-  div#team div.team-wrap:hover p > span {
+  div#artists div.team-wrap:hover p > span {
     background: #000;
     color: #fff; }
-  div#team div.team-wrap p {
+  div#artists div.team-wrap p {
     position: relative;
     width: 100%;
     height: calc(240px - 1px);
     margin-left: 0; }
-    div#team div.team-wrap p > span {
+    div#artists div.team-wrap p > span {
       position: absolute;
       top: 84px;
       left: -85px;
@@ -10427,9 +10431,9 @@ div#team {
       text-align: center;
       display: block; }
       @media (max-width: 991.98px) {
-        div#team div.team-wrap p > span {
+        div#artists div.team-wrap p > span {
           border-top: solid 1px #000; } }
-  div#team div.team-wrap div {
+  div#artists div.team-wrap div {
     position: absolute;
     top: 45%;
     border: solid 1px #000;
@@ -10442,9 +10446,9 @@ div#team {
     margin: -75px auto 0;
     overflow: hidden; }
     @media (max-width: 991.98px) {
-      div#team div.team-wrap div {
+      div#artists div.team-wrap div {
         left: 35px; } }
-    div#team div.team-wrap div img {
+    div#artists div.team-wrap div img {
       -o-object-fit: cover;
       object-fit: cover;
       width: 100%;
@@ -10452,11 +10456,11 @@ div#team {
       position: relative;
       top: -1px; }
       @media (max-width: 991.98px) {
-        div#team div.team-wrap div img {
+        div#artists div.team-wrap div img {
           width: 100%;
           height: auto;
           top: 0; } }
-  div#team div.team-wrap span.team-member-name {
+  div#artists div.team-wrap span.team-member-name {
     position: absolute;
     display: block;
     width: calc(100% - 35px);
@@ -12491,7 +12495,7 @@ body.brutal-landing {
           font-size: 19px;
           color: #fff; }
   @media (max-width: 1024px) and (orientation: portrait) {
-    body.brutal-landing div.brutal-support div#services h3 {
+    body.brutal-landing div.brutal-support div#about h3 {
       display: block;
       margin: 0;
       padding: 60px 0 45px;
@@ -12500,72 +12504,72 @@ body.brutal-landing {
       text-align: left;
       font-size: 1.999em; } }
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    body.brutal-landing div.brutal-support div#services h3 {
+    body.brutal-landing div.brutal-support div#about h3 {
       border-bottom: none;
       margin-bottom: 10px;
       padding-left: 0;
       text-align: center; } }
   @media (max-width: 1024px) and (orientation: portrait) {
-    body.brutal-landing div.brutal-support div#services h4 {
+    body.brutal-landing div.brutal-support div#about h4 {
       font-weight: 300;
       font-size: 1.414em;
       text-transform: uppercase;
       margin-bottom: 5px;
       line-height: 1.2; } }
   @media (max-width: 1024px) and (orientation: portrait) {
-    body.brutal-landing div.brutal-support div#services:hover div.services-center {
+    body.brutal-landing div.brutal-support div#about:hover div.services-center {
       background: #fff; }
-      body.brutal-landing div.brutal-support div#services:hover div.services-center h3 {
+      body.brutal-landing div.brutal-support div#about:hover div.services-center h3 {
         color: #000; } }
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    body.brutal-landing div.brutal-support div#services div.services-left {
+    body.brutal-landing div.brutal-support div#about div.services-left {
       height: 100%; } }
-  body.brutal-landing div.brutal-support div#services div.services-left > div {
+  body.brutal-landing div.brutal-support div#about div.services-left > div {
     border-left: none; }
   @media (max-width: 767px) {
-    body.brutal-landing div.brutal-support div#services div.services-left > div, body.brutal-landing div.brutal-support div#services div.services-right > div {
+    body.brutal-landing div.brutal-support div#about div.services-left > div, body.brutal-landing div.brutal-support div#about div.services-right > div {
       border: none;
       padding: 0 15px; } }
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    body.brutal-landing div.brutal-support div#services div.services-left > div, body.brutal-landing div.brutal-support div#services div.services-right > div {
+    body.brutal-landing div.brutal-support div#about div.services-left > div, body.brutal-landing div.brutal-support div#about div.services-right > div {
       border-right: none;
       padding: 30px; }
-      body.brutal-landing div.brutal-support div#services div.services-left > div + div, body.brutal-landing div.brutal-support div#services div.services-right > div + div {
+      body.brutal-landing div.brutal-support div#about div.services-left > div + div, body.brutal-landing div.brutal-support div#about div.services-right > div + div {
         border-left: solid 1px #000; } }
   @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
-    body.brutal-landing div.brutal-support div#services div.services-left > div, body.brutal-landing div.brutal-support div#services div.services-right > div {
+    body.brutal-landing div.brutal-support div#about div.services-left > div, body.brutal-landing div.brutal-support div#about div.services-right > div {
       border-right: solid 1px #000; }
-      body.brutal-landing div.brutal-support div#services div.services-left > div + div, body.brutal-landing div.brutal-support div#services div.services-right > div + div {
+      body.brutal-landing div.brutal-support div#about div.services-left > div + div, body.brutal-landing div.brutal-support div#about div.services-right > div + div {
         border-left: transparent; } }
-  body.brutal-landing div.brutal-support div#services div.services-right > div {
+  body.brutal-landing div.brutal-support div#about div.services-right > div {
     border-right: none; }
     @media (max-width: 767px) {
-      body.brutal-landing div.brutal-support div#services div.services-right > div + div {
+      body.brutal-landing div.brutal-support div#about div.services-right > div + div {
         border-bottom: solid 1px #000; }
-        body.brutal-landing div.brutal-support div#services div.services-right > div + div p {
+        body.brutal-landing div.brutal-support div#about div.services-right > div + div p {
           margin-bottom: 0;
           border-bottom: none; } }
     @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-      body.brutal-landing div.brutal-support div#services div.services-right > div {
+      body.brutal-landing div.brutal-support div#about div.services-right > div {
         border-bottom: solid 1px #000; } }
-  body.brutal-landing div.brutal-support div#services > div {
+  body.brutal-landing div.brutal-support div#about > div {
     border-top: none; }
-  body.brutal-landing div.brutal-support div#services p {
+  body.brutal-landing div.brutal-support div#about p {
     width: 100%;
     margin-bottom: 10px; }
     @media (max-width: 767px) {
-      body.brutal-landing div.brutal-support div#services p {
+      body.brutal-landing div.brutal-support div#about p {
         margin-bottom: 60px;
         padding-bottom: 60px;
         border-bottom: solid 1px #000; } }
-  body.brutal-landing div.brutal-support div#services a {
+  body.brutal-landing div.brutal-support div#about a {
     vertical-align: bottom;
     overflow: visible; }
-    body.brutal-landing div.brutal-support div#services a:after {
+    body.brutal-landing div.brutal-support div#about a:after {
       display: none; }
-    body.brutal-landing div.brutal-support div#services a:hover:before {
+    body.brutal-landing div.brutal-support div#about a:hover:before {
       height: 3px; }
-    body.brutal-landing div.brutal-support div#services a:before {
+    body.brutal-landing div.brutal-support div#about a:before {
       content: '';
       position: absolute;
       top: calc(100% - 2px);

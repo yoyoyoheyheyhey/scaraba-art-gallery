@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { useRouter, RouterLink } from 'vue-router'
+
+// Vue Routerのインスタンスを取得
+const router = useRouter();
+
+function navigateHome(event: MouseEvent) {
+  event.preventDefault();
+  router.push('/');
+}
 </script>
 
 <template>
@@ -51,27 +60,30 @@
     </div>
   </div>
 
-
   <!--nav-->
   <nav class="container-fluid">
     <div class="row elem-border">
-      <div class="col-sm-8 anchor brand">
-        <h1 class="stretch-text"><a href="/">
-          <span class="stretch_it">BRUTAL</span>
-        </a></h1>
+      <div class="col-sm-8 anchor brand" @click="navigateHome">
+        <h1 class="stretch-text">
+          <a href="/">
+            <span class="stretch_it">BRUTAL</span>
+          </a>
+        </h1>
       </div>
       <div class="col-sm-2 navigation">
         <ul class="navlist">
-          <li class="anchor"><a href="#features">Features</a></li><!--
-          --><li class="anchor"><a href="#services">Services</a></li><!--
-          --><li class="anchor"><a href="#prices">Prices</a></li>
+          <li class="anchor text-truncate"><RouterLink to="#featured-exhibition">Featured Exhibition</RouterLink></li>
+          <li class="anchor text-truncate"><RouterLink to="#about">We</RouterLink></li>
+          <li class="anchor text-truncate"><RouterLink to="#artists">Artists</RouterLink></li>
         </ul>
       </div>
+      <!-- TODO: localization -->
       <div class="col-sm-2 anchor">
         <a class="contact" href="#contact">Contact</a>
       </div>
     </div>
-  </nav><!--end nav-->
+  </nav>
+  <!--end nav-->
 
 
   <!--main-->
@@ -81,125 +93,99 @@
     <!--tagline-->
     <div id="hero" class="row elem-border">
       <div class="col-xl-4 col-lg-5 col-md-7">
-        <h2 class="stretch-text"><span>A Brutalist</span></h2>
-        <h3 class="stretch-text"><span>HTML 5 Template</span></h3>
+        <h2 class="stretch-text"><span>SCARABA</span></h2>
+        <h3 class="stretch-text text-transform-none"><span>Art Gallery</span></h3>
       </div>
-      <div class="col-xl-8 col-lg-7 col-md-5 text-center">
-        <a class="cta" target="_blank" href="https://themeforest.net/item/brutal-a-brutalist-bootstrap-v4-one-page-html-template/21291031">
-          <span>Get it on ThemeForest</span>
-        </a>
+      <div class="col-xl-8 col-lg-7 col-md-5 text-center d-flex justify-content-center align-items-center">
+        <p class="p-5 bg-black color-white fs-xl">We curate uncopyable art, discovering new meanings for entities onchain.<br />—SCARABA: where the unseen is manifested.</p>
       </div>
     </div><!--endtagline-->
 
 
-    <!--features-->
-    <div id="features" class="row">
+    <!--featured exhibition-->
+    <div id="featured-exhibition" class="row">
       <div class="col-lg-6 col-md-12 features-left order-2 order-sm-2">
         <div class="row elem-border">
-          <div class="col-xl-12 col-lg-12 col-md-6">
+          <div class="col-12">
             <div class="row">
-              <div class="col-lg-6">
-                <h4>Responsive</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-              <div class="col-lg-6 text-right">
-                <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-modal">
-                    <span>Read more</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-12 col-lg-12 col-md-6">
-            <div class="row">
-              <div class="col-lg-6">
-                <h4>Bootstrap v4</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-              <div class="col-lg-6 text-right">
-                <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-modal">
-                    <span>Read more</span>
-                  </a>
-                </div>
+              <div class="col-lg-12">
+                <img src="/Brutal/img/conlliu/conlliu.png" alt="Conlliū" class="object-fit-cover" width="100%">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 order-1 order-lg-2 order-sm-1">
 
+      <div class="col-lg-6 col-md-12 order-1 order-lg-2 order-sm-1">
         <div class="row elem-border features-title">
           <div class="col-12">
-            <h3>There are features</h3>
+            <h3>Featured Exhibition</h3>
           </div>
         </div>
 
         <div class="row elem-border features-right">
-          <div class="col-lg-6 col-md-6">
+          <div class="col-12 d-flex flex-column justify-content-end">
             <div class="row">
-              <div class="col-12">
-                <h4>HTML5</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-              <div class="col-12 text-right">
-                <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-modal">
-                    <span>Read more</span>
-                  </a>
+              <div class="col-12 d-flex align-items-end flex-wrap">
+                <h2 class="text-transform-none">Conlliū</h2>
+                <div class="d-flex align-items-center ml-3 mb-3">
+                  <img src="/Brutal/img/pfp-icons/le-semeur.jpg" alt="Shinya SUZUKI" width="24" height="24" class="rounded-circle mr-2 object-fit-cover">
+                  <span>Shinya SUZUKI</span>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="row">
               <div class="col-12">
-                <h4>CSS3</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Incididunt ut labore et dolore magna aliqua.</p>
+                <h4 class="text-transform-none">—A new digital mythology, forged at the frontier of NFTs.</h4>
+                <p>Conlliū transcends mere art creation; it infuses irreversible and uncopyable historical moments with the divine, intertwining them with unseen forces that culminated in the mythical erection of the Dragon God's sanctuary.</p>
               </div>
-            </div>
-            <div class="row">
               <div class="col-12 text-right">
                 <div class="btn-style-main">
                     <a href="#" data-toggle="modal" data-target=".template-modal">
                     <span>Read more</span>
+                    <!--
+                    # TODO: MODAL
+                    Through this ritualistic journey, each artwork in Conlliū becomes a nexus of physical finality and digital perpetuity, offering a window into the mystical interplay of forces that shape our perception of the sacred. More than mere artifacts, these pieces are portals to an era where the divine and mortal realms merge seamlessly.
+
+                    The process begins with the physical act of creation, where Shinya Suzuki’s masterpieces are set aflame, marking the end of their physical form. In these fleeting moments of destruction, a spectacle unfolds, meticulously captured and reborn as digital artifacts on the blockchain. Each transformation is unique, preserving the final flash of existence as an uncopyable NFT.
+
+                    These digital renditions transcend art; they are testimonies to time and transformation, eternal witnesses to the power and transience of creation. They reflect the cyclical nature of destruction and rebirth, offering a profound commentary on existence itself—challenging us to reconsider the boundaries between the ephemeral and the eternal.
+
+                    Join us in witnessing the convergence of art, technology, and spirituality in Conlliū—where every ember tells a story, and every story illuminates the path to the divine.
+                    -->
                   </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div><!--end features-->
+    </div><!--end featured exhibition-->
 
 
-    <!--products-->
+    <!--39 moments-->
     <div id="products" class="row elem-border">
 
       <div class="col-lg-4 col-md-12 order-2 order-lg-1 order-md-2 order-sm-2 products-left-outer">
         <div class="row products-left">
           <div class="col-6">
             <div class="product-wrap" data-product-id="1">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
           <div class="col-6">
             <div class="product-wrap" data-product-id="2">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>
         <div class="row products-left">
           <div class="col-6">
             <div class="product-wrap" data-product-id="3">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
           <div class="col-6">
             <div class="product-wrap" data-product-id="4">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>
@@ -208,97 +194,81 @@
       <div class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center products-center">
 
           <div class="products-title-mobile">
-              <h3>There are<br/> products</h3>
+            <h3>39 Divine Moments <br/>of Erecting the Ryūjin's Hokora</h3>
           </div>
 
           <div class="products-carousel owl-carousel owl-theme">
 
-              <div class="products-title-carousel">
-                  <h3>There are<br/> products</h3>
+              <div class="products-title-carousel d-flex justify-content-center align-items-center vertical-video-ratio object-fit-cover">
+                <h3>39 Divine Moments <br/>of Erecting the Ryūjin's Hokora</h3>
               </div>
 
-              <div id="product-1" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-1" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #1</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #1</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
                   </div>
               </div>
 
-              <div id="product-2" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-2" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #2</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #2</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
                   </div>
               </div>
 
-              <div id="product-3" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-3" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #3</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #3</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
                   </div>
               </div>
 
-              <div id="product-4" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-4" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #4</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #4</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
                   </div>
               </div>
 
-              <div id="product-5" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-5" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #5</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #5</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
                   </div>
               </div>
 
-              <div id="product-6" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-6" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #6</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #6</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
                   </div>
               </div>
 
-              <div id="product-7" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-7" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #7</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #7</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
                   </div>
               </div>
 
-              <div id="product-8" class="product-carousel-item" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-8" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
                   <div class="product-description">
-                      <h5>Product #8</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+                      <h5>Moment #8</h5>
                       <a href="#" class="product-link">
                           &rarr;
                       </a>
@@ -312,99 +282,78 @@
         <div class="row products-right">
           <div class="col-6">
             <div class="product-wrap" data-product-id="5">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
           <div class="col-6">
             <div class="product-wrap" data-product-id="6">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>
         <div class="row products-right">
           <div class="col-6">
             <div class="product-wrap" data-product-id="7">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
           <div class="col-6">
             <div class="product-wrap" data-product-id="8">
-              <img src="/Brutal/img/placeholder.png" alt="">
+              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>
       </div>
-    </div><!--end products-->
+    </div><!--end 39 moments-->
 
 
-    <!--prices-->
+    <!--Roadmap-->
     <div id="prices" class="row elem-border">
       <div class="col-lg-2 prices-left">
-        <h3>There<br/> are<br/> prices</h3>
+        <h3>Roadmap</h3>
       </div>
       <div class="col-lg-10">
         <div class="row prices-right">
           <div class="col-sm-4 col-12">
             <div class="prices-wrap">
-              <h4>&dollar;10</h4>
-              <p>Really very basic</p>
+              <h4>39<sup>&ast;</sup></h4>
+              <p>Daily Unveiling</p>
               <span>&larr;</span>
             </div>
             <div class="prices-details">
-              <h5>The Basic Package</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-              <ul>
-                <li>- Single License</li>
-                <li>- One User</li>
-                <li><del>- Free Support</del></li>
-                <li><del>- Customization</del></li>
-              </ul>
-              <span>&larr;</span>
+              <h5>Capturing Ephemera:</h5>
+              <p>Each day, a unique moment of Conlliū is revealed, capturing fleeting glimpses of a mystical past, immortalized in digital form.</p>
             </div>
           </div>
           <div class="col-sm-4 col-12">
             <div class="prices-wrap">
-              <h4>&dollar;15</h4>
-              <p>Mildly less basic</p>
+              <h4>1<sup>&dagger;</sup></h4>
+              <p>Final Reward</p>
               <span>&larr;</span>
             </div>
             <div class="prices-details">
-              <h5>The Standard Package</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-              <ul>
-                <li>- Single License</li>
-                <li>- Three Users</li>
-                <li>- Free Support</li>
-                <li><del>- Customization</del></li>
-              </ul>
-              <span>&larr;</span>
+              <h5>The Complete Chronicle:</h5>
+              <p>Upon collecting all 39 moments, the sole collector is granted ownership of the full video NFT, a unique testimony of the sacred ritual.</p>
             </div>
           </div>
           <div class="col-sm-4 col-12">
             <div class="prices-wrap reveal-left">
-              <h4>&dollar;20</h4>
-              <p>Slighty less basic</p>
+              <h4>8<sup>&sect;</sup></h4>
+              <p>Diviner's Privilege</p>
               <span>&rarr;</span>
             </div>
             <div class="prices-details">
-              <h5>The Premium Package</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-              <ul>
-                <li>- Single License</li>
-                <li>- Unlimited Users</li>
-                <li>- Free Support</li>
-                <li>- Customization</li>
-              </ul>
-              <span>&larr;</span>
+              <h5>Early Access Elite:</h5>
+              <p>Eight select 'Diviners' receive early access, securing their part in this digital mythology before public release. Stay tuned for further updates.</p>
             </div>
           </div>
         </div>
       </div>
-    </div><!--end prices-->
+    </div><!--end roadmap-->
 
 
     <!--Video-->
-    <div id="video" class="row elem-border">
+    <!-- <div id="video" class="row elem-border">
       <div class="col-lg-4 video-left">
         <h3>There<br/> is a<br/> video</h3>
       </div>
@@ -419,10 +368,11 @@
           </div>
         </div>
       </div>
-    </div><!--end video-->
+    </div> -->
+    <!--end video-->
 
 
-    <!--Gallery-->
+    <!--Mysteries of Conlliu-->
     <div id="gallery" class="row elem-border">
       <div class="col-lg-8 order-2 order-lg-1 carousel-wrap">
         <div id="gallery-carousel" class="owl-carousel owl-theme">
@@ -435,123 +385,122 @@
         </div>
       </div>
       <div class="col-lg-4 order-1 order-lg-2 gallery-right">
-        <h3>There<br/> is a<br/> gallery</h3>
+        <h3>Mysteries<br/> <span class="text-transform-none">of</span><br/> <span class="text-transform-none">Conlliū</span></h3>
       </div>
-    </div><!--end gallery-->
+    </div><!--end Mysteries of Conlliu-->
 
-
-    <!--services-->
-    <div id="services" class="row">
+    <!--about-->
+    <div id="about" class="row">
       <div class="col-lg-4 col-md-12 order-2 order-lg-1 order-md-2 order-sm-2">
         <div class="row elem-border services-left">
           <div class="col-lg-12 col-sm-6 col-6">
-            <h4>We<br/> Design</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a>
+            <h4>We<br/> Curate</h4>
+            <p>We summon art that eludes replication, timeless yet transient.</p>
+            <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
           <div class="col-lg-12 col-sm-6 col-6">
-            <h4>We<br/> Sell</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a>
+            <h4>We<br/> Discover</h4>
+            <p>We trace the unseen depths of NFTs, reshaping perceptions.</p>
+            <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center services-center">
-        <h3>We Do<br/> Things</h3>
+        <h3>We</h3>
       </div>
       <div class="col-lg-4 col-md-12 order-3">
         <div class="row elem-border services-right">
           <div class="col-lg-12 col-sm-6 col-6">
-            <h4>We<br/> Develop</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a>
+            <h4>We<br/> Manifest</h4>
+            <p>We unveil hidden symmetries, illuminating the obscured.</p>
+            <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
           <div class="col-lg-12 col-sm-6 col-6">
-            <h4>We<br/> Promote</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a>
+            <h4>We<br/> Empower</h4>
+            <p>We elevate spirits, guiding souls to ethereal realms.</p>
+            <!-- <a href="#" data-toggle="modal" data-target=".template-modal">Read more</a> -->
           </div>
         </div>
       </div>
-    </div><!--end services-->
+    </div><!--end about-->
 
 
-    <!--team-->
-    <div id="team" class="row elem-border">
+    <!--artists-->
+    <div id="artists" class="row elem-border">
       <div class="col-lg-3 col-md-12 team-left">
-        <h3>There<br/> is a<br/> Team</h3>
+        <h3>Artists</h3>
       </div>
       <div class="team-carousel-wrap col-lg-9 col-md-12">
         <div class="team-carousel owl-carousel owl-theme">
 
           <div class="team-member">
             <div class="team-wrap">
-              <p><span>Developer</span></p>
+              <p><span>#1</span></p>
               <div>
-                <img src="/Brutal/img/placeholder.png" alt="">
+                <img src="/Brutal/img/pfp-icons/le-semeur.jpg" alt="">
               </div>
               <span class="team-member-name">
-              <a class="btl-anchor" href="#">Amy Unthank</a>
+              <a class="btl-anchor" href="https://www.instagram.com/aon_polo" target="_blank" rel="noopener noreferrer">Shinya SUZUKI</a>
             </span>
             </div>
           </div>
 
           <div class="team-member">
             <div class="team-wrap">
-              <p><span>Designer</span></p>
+              <p><span>#2</span></p>
               <div>
                 <img src="/Brutal/img/placeholder.png" alt="">
               </div>
               <span class="team-member-name">
-              <a class="btl-anchor" href="#">Rose Underwood</a>
+              <a class="btl-anchor" href="#">Awaiting</a>
             </span>
             </div>
           </div>
 
           <div class="team-member">
             <div class="team-wrap">
-              <p><span>Marketing</span></p>
+              <p><span>#3</span></p>
               <div>
                 <img src="/Brutal/img/placeholder.png" alt="">
               </div>
               <span class="team-member-name">
-              <a class="btl-anchor" href="#">Samantha Fox</a>
+              <a class="btl-anchor" href="#">Awaiting</a>
             </span>
             </div>
           </div>
 
           <div class="team-member">
             <div class="team-wrap">
-              <p><span>Developer</span></p>
+              <p><span>#4</span></p>
               <div>
                 <img src="/Brutal/img/placeholder.png" alt="">
               </div>
               <span class="team-member-name">
-              <a class="btl-anchor" href="#">Amy Unthank</a>
+              <a class="btl-anchor" href="#">Awaiting</a>
             </span>
             </div>
           </div>
 
           <div class="team-member">
             <div class="team-wrap">
-              <p><span>Designer</span></p>
+              <p><span>#5</span></p>
               <div>
                 <img src="/Brutal/img/placeholder.png" alt="">
               </div>
               <span class="team-member-name">
-              <a class="btl-anchor" href="#">Rose Underwood</a>
+              <a class="btl-anchor" href="#">Awaiting</a>
             </span>
             </div>
           </div>
 
           <div class="team-member">
             <div class="team-wrap">
-              <p><span>Marketing</span></p>
+              <p><span>#6</span></p>
               <div>
                 <img src="/Brutal/img/placeholder.png" alt="">
               </div>
               <span class="team-member-name">
-              <a class="btl-anchor" href="#">Samantha Fox</a>
+              <a class="btl-anchor" href="#">Awaiting</a>
             </span>
             </div>
           </div>
@@ -559,19 +508,24 @@
         </div>
         <div class="team-carousel-nav"></div>
       </div>
-    </div><!--end team-->
+    </div><!--end artists-->
 
 
     <!--Contact-->
     <div id="contact" class="row elem-border">
       <div class="col-lg-2 col-md-12 order-2 order-lg-1 order-md-2 contact-left">
         <ul id="social">
-          <li>Facebook</li><!--
-          --><li>Twitter</li><!--
-          --><li>YouTube</li>
+          <RouterLink to="https://www.instagram.com/scaraba_art_gallery/">
+            <template #default="{ href }">
+              <li><a :href="href" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </template>
+          </RouterLink>
+          <!-- <li><a href="https://www.instagram.com/scaraba_art_gallery/" target="_blank" rel="noopener noreferrer">Instagram</a></li> -->
+          <li>_</li>
+          <li>_</li>
         </ul>
       </div>
-      <div class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1 contact-right">
+      <!-- <div class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1 contact-right">
         <div class="row">
           <div class="col-md-3 col-sm-12 contact-title">
             <h3>There<br/> is a<br/> Form</h3>
@@ -582,8 +536,8 @@
               <span class="sent">Message received, we'll be in touch.</span>
               <div class="form-group">
                 <label for="contact-name">Name</label>
-                <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Name" required><!--
-                --><input type="email" class="form-control" id="contact-email" name="contact-email" placeholder="Email" required>
+                <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Name" required>
+                <input type="email" class="form-control" id="contact-email" name="contact-email" placeholder="Email" required>
                 <label for="contact-email">Email</label>
               </div>
               <div class="form-group">
@@ -596,20 +550,36 @@
             </form>
           </div>
         </div>
-      </div>
-    </div>    <!--end contact-->
-
+      </div> -->
+    </div>
+    <!--end contact-->
 
   </div><!--end main-->
-
-
-  <!--Footer-->
-  <footer class="container-fluid">
-    <div class="row elem-border">
-      <div class="col-12 text-right">
-        <p><a href="https://www.michaelpalmerwebdesign.com">&copy;2018 MP Web</a></p>
-      </div>
-    </div>
-  </footer><!--end footer-->
   </main>
 </template>
+
+<style scoped>
+.text-transform-none {
+  text-transform: none !important;
+}
+.bg-black {
+  background-color: #000 !important;
+}
+.color-white {
+  color: #fff !important;
+}
+.fs-xl {
+  font-size: 1.414em
+}
+.object-fit-cover {
+  object-fit: cover;
+}
+.vertical-video-ratio {
+  aspect-ratio: 9 / 16;
+}
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>

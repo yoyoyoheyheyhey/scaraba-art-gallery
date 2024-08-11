@@ -9,7 +9,13 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-  ]
+  ],
+  scrollBehavior(to, _from, savedPosition) {
+    if (to.hash) {
+      return { el: to.hash };
+    }
+    return savedPosition || { top: 0 };
+  },
 })
 
 export default router
