@@ -9568,7 +9568,7 @@ div#prices {
         bottom: 30px;
         left: 0;
         right: 0;
-        max-width: 35%;
+        /* max-width: 35%; */
         margin: 0 auto;
         padding-bottom: 5px;
         display: inline-block;
@@ -9660,7 +9660,7 @@ div#prices {
         height: 100%;
         background-color: #fff;
         z-index: 1;
-        padding: 45px 15px 30px;
+        padding: 30px 15px 30px;
         text-align: left; }
         @media (max-width: 767px) {
           div#prices div.prices-right > div div.prices-details {
@@ -9680,7 +9680,7 @@ div#prices {
           font-size: 1.414em;
           display: block; }
         div#prices div.prices-right > div div.prices-details p {
-          width: 59%;
+          /* width: 59%; */
           max-width: none;
           margin: 0;
           padding: 0;

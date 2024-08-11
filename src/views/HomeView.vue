@@ -187,7 +187,7 @@ function navigateHome(event: MouseEvent) {
         <div class="row products-left">
           <div class="col-6">
             <div class="product-wrap" data-product-id="1">
-              <img src="/Brutal/img/placeholder.png" alt="" class="vertical-video-ratio object-fit-cover">
+              <img src="/Brutal/img/conlliu/1.gif" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
           <div class="col-6">
@@ -222,7 +222,7 @@ function navigateHome(event: MouseEvent) {
                 <h3>39 Divine Moments <br/>of Erecting the Ryūjin's Hokora</h3>
               </div>
 
-              <div id="product-1" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/placeholder.png);">
+              <div id="product-1" class="product-carousel-item vertical-video-ratio object-fit-cover" style="background-image: url(/Brutal/img/conlliu/1.gif);">
                   <div class="product-description">
                       <h5>Moment #1</h5>
                       <a href="#" class="product-link">
@@ -341,7 +341,7 @@ function navigateHome(event: MouseEvent) {
             </div>
             <div class="prices-details">
               <h5>Capturing Ephemera:</h5>
-              <p>Each day, a unique moment of Conlliū is revealed, capturing fleeting glimpses of a mystical past, immortalized in digital form.</p>
+              <p>Each day, a unique moment of Conlliū is revealed in a preview of downscaled quality. Note: The actual NFTs are available in in high-resolution, capturing every detail of the mystical past, immortalized in digital form.</p>
             </div>
           </div>
           <div class="col-sm-4 col-12">
@@ -352,7 +352,7 @@ function navigateHome(event: MouseEvent) {
             </div>
             <div class="prices-details">
               <h5>The Complete Chronicle:</h5>
-              <p>Upon collecting all 39 moments, the sole collector is granted ownership of the full video NFT, a unique testimony of the sacred ritual.</p>
+              <p>Upon collecting all 39 moments, the sole collector is granted ownership of the full video NFT, presented in stunning 4K resolution. This unique testimony of the sacred ritual captures every detail with unparalleled clarity.</p>
             </div>
           </div>
           <div class="col-sm-4 col-12">
