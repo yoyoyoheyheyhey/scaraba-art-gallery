@@ -5,11 +5,14 @@ interface Moment {
 }
 
 const releasedGifIds = [1]; // ここにリリース済みのGIFのIDを追加
+const arAddresses: Record<number, string> = {
+  1: 'https://arweave.net/r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
+}
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
   // IDがreleasedGifIds配列に含まれているかどうかで画像のパスを切り替え
-  const imagePath = releasedGifIds.includes(id) 
-                    ? `/Brutal/img/conlliu/${id}.gif` 
+  const imagePath = arAddresses[id]
+                    ? arAddresses[id] 
                     : '/Brutal/img/placeholder.png';
 
   momentsOf39.push({
