@@ -120,10 +120,17 @@ function navigateHome(event: MouseEvent) {
                   <span>Shinya SUZUKI</span>
                 </div>
               </div>
+
               <div class="col-12">
                 <h4 class="text-transform-none">{{ $t('message.conlliu.subtitle') }}</h4>
-                <p>{{ $t('message.conlliu.subDesc') }}</p>
+                <a class="cta" target="_blank" href="https://opensea.io/collection/conlliu/overview">
+                  <h5 class="text-transform-none d-flex align-items-center">
+                    OpenSea<img src="/Brutal/img/icons/link.png" width="18" height="18" class="ml-2"/>
+                  </h5>
+                </a>
+                <p class="mt-4">{{ $t('message.conlliu.subDesc') }}</p>
               </div>
+
               <div class="col-12 text-right">
                 <div class="btn-style-main">
                     <a href="#" data-toggle="modal" data-target="#about-conlliu">
@@ -199,9 +206,14 @@ function navigateHome(event: MouseEvent) {
             >
                 <div class="product-description">
                     <h5>Moment #{{ moment.id }}</h5>
-                    <a href="#" class="product-link">
-                        &rarr;
+
+                    <a v-if="moment.openSea" target="_blank" :href="moment.openSea">
+                      <p class="d-flex align-items-center">OpenSea<img src="/Brutal/img/icons/link.png" style="width: 18px" class="ml-2"/></p>
                     </a>
+
+                    <p v-else class="text-transform-none d-flex align-items-center">
+                      Awaiting
+                    </p>
                 </div>
             </div>
 

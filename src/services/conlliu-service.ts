@@ -2,11 +2,15 @@ interface Moment {
   id: number;
   title: string;
   image: string;
+  openSea: string | undefined;
 }
 
 const releasedGifIds = [1]; // ここにリリース済みのGIFのIDを追加
 const arAddresses: Record<number, string> = {
   1: 'https://arweave.net/r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
+}
+const openSeaAddresses: Record<number, string> = {
+  1: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/1',
 }
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
@@ -15,10 +19,13 @@ for (let id = 1; id <= 39; id++) {
                     ? arAddresses[id] 
                     : '/Brutal/img/placeholder.png';
 
+  const openSea = openSeaAddresses[id]
+
   momentsOf39.push({
     id: id,
     title: `Moment #${id}`,
     image: imagePath,
+    openSea: openSea,
   });
 }
 
