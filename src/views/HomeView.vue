@@ -158,6 +158,14 @@ function navigateHome(event: MouseEvent) {
                       <h5>{{ $t('message.conlliu.desc.section4.header') }}</h5>
                       <p>{{ $t('message.conlliu.desc.section4.p') }}</p>
                     </section>
+
+                    <section>
+                      <a class="cta" target="_blank" href="https://opensea.io/collection/conlliu/overview">
+                        <h5 class="text-transform-none d-flex align-items-center">
+                          OpenSea<img src="/Brutal/img/icons/link.png" width="18" height="18" class="ml-2"/>
+                        </h5>
+                      </a>
+                    </section>
                   </template>
                 </ScarabaModal>
               </div>
