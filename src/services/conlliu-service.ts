@@ -5,12 +5,14 @@ interface Moment {
   openSea: string | undefined;
 }
 
-const releasedGifIds = [1]; // ここにリリース済みのGIFのIDを追加
+const releasedGifIds = [1, 10]; // ここにリリース済みのGIFのIDを追加
 const arAddresses: Record<number, string> = {
   1: 'https://arweave.net/r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
+  10: 'https://arweave.net/sfhr5x2gTCr1SeAMzMpPCkEhZCijbJqqNU12cv_g9f8'
 }
 const openSeaAddresses: Record<number, string> = {
   1: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/1',
+  10: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/2',
 }
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
