@@ -63,7 +63,7 @@ export const en: Messages = {
     section3: {
       subDesc: "Diviner's Privilege",
       header: 'Early Access Elite:',
-      desc: "Eight select 'Diviners' receive early access, securing their part in this digital mythology before public release. Stay tuned for further updates.",
+      desc: "As a token of our appreciation for your purchase of 'Conlliū,' you are granted exclusive rights to acquire one of eight 'Diviner' artworks before their public release. This privilege ensures you play a significant part in our evolving digital mythology. Stay tuned for further updates.",
     },
   },
   we: {

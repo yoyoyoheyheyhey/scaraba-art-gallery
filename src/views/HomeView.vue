@@ -275,6 +275,7 @@ function navigateHome(event: MouseEvent) {
           </div>
           <div class="col-sm-4 col-12">
             <div class="prices-wrap reveal-left">
+              <!-- TODO: -->
               <h4>8<sup>&sect;</sup></h4>
               <p>{{ $t('message.roadmap.section3.subDesc') }}</p>
               <span>&rarr;</span>
