@@ -5,16 +5,22 @@ interface Moment {
   openSea: string | undefined;
 }
 
-const releasedGifIds = [1, 10, 7]; // ここにリリース済みのGIFのIDを追加
+const releasedGifIds = [1, 10, 7, 29, 6, 34]; // ここにリリース済みのGIFのIDを追加
 const arAddresses: Record<number, string> = {
   1: 'https://arweave.net/r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
   10: 'https://arweave.net/sfhr5x2gTCr1SeAMzMpPCkEhZCijbJqqNU12cv_g9f8',
   7: 'https://arweave.net/O5lXZ54s4IbV6GnvFIaR2F93_kB_Rb2qXJF3R6nRHGY',
+  29: 'https://arweave.net/CC23Mu6JBh_DBAx748E4b1PiA2xinlOpG3BKpq0ZZgQ',
+  6: 'https://arweave.net/9HX3puXGR1LpJUx8jR79tOsx6mwj9Xz63wWlOPDW0N0',
+  34: 'https://arweave.net/T3ruUnVIHdROC3pjcoyFoNbhCdnyjAhIgufzggthsfo',
 }
 const openSeaAddresses: Record<number, string> = {
   1: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/1',
   10: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/2',
   7: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/3',
+  29: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/4',
+  6: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/5',
+  34: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/6',
 }
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
