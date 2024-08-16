@@ -187,7 +187,7 @@ function navigateHome(event: MouseEvent) {
             class="col-6"
           >
             <div class="product-wrap" :data-product-id="moment.id">
-              <img :src="moment.image" alt="" class="vertical-video-ratio object-fit-cover">
+              <img :src="moment.thumbnail" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@ function navigateHome(event: MouseEvent) {
             class="col-6"
           >
             <div class="product-wrap" :data-product-id="moment.id">
-              <img :src="moment.image" alt="" class="vertical-video-ratio object-fit-cover">
+              <img :src="moment.thumbnail" alt="" class="vertical-video-ratio object-fit-cover">
             </div>
           </div>
         </div>

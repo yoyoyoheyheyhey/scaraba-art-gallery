@@ -3,9 +3,11 @@ interface Moment {
   title: string;
   image: string;
   openSea: string | undefined;
+  thumbnail: string | undefined;
 }
 
-const releasedGifIds = [1, 10, 7, 29, 6, 34]; // ここにリリース済みのGIFのIDを追加
+const releasedGifIds = [1, 10, 7, 29, 6, 34, 12, 19, 37]; // ここにリリース済みのGIFのIDを追加
+
 const arAddresses: Record<number, string> = {
   1: 'https://arweave.net/r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
   10: 'https://arweave.net/sfhr5x2gTCr1SeAMzMpPCkEhZCijbJqqNU12cv_g9f8',
@@ -13,29 +15,28 @@ const arAddresses: Record<number, string> = {
   29: 'https://arweave.net/CC23Mu6JBh_DBAx748E4b1PiA2xinlOpG3BKpq0ZZgQ',
   6: 'https://arweave.net/9HX3puXGR1LpJUx8jR79tOsx6mwj9Xz63wWlOPDW0N0',
   34: 'https://arweave.net/T3ruUnVIHdROC3pjcoyFoNbhCdnyjAhIgufzggthsfo',
-}
-const openSeaAddresses: Record<number, string> = {
-  1: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/1',
-  10: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/2',
-  7: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/3',
-  29: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/4',
-  6: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/5',
-  34: 'https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/6',
+  12: 'https://arweave.net/d_hFD8y-sp_Yf4di0sEdGWuEqo4HiTDcMpR4YhLYGzY',
+  19: 'https://arweave.net/FgapHf7ut3urEgcIlxlWtL7g2P_jK8eLkdwqwP0dKd0',
+  37: 'https://arweave.net/WU4KS9TfWLwu_yB0Qu3UtaQ7Rus_5ULJ0lme9zvyDR4',
 }
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
   // IDがreleasedGifIds配列に含まれているかどうかで画像のパスを切り替え
-  const imagePath = arAddresses[id]
-                    ? arAddresses[id] 
-                    : '/Brutal/img/placeholder.png';
-
-  const openSea = openSeaAddresses[id]
+  let image = '/Brutal/img/placeholder.png';
+  let openSea;
+  let thumbnail;
+  if (releasedGifIds.includes(id)) {
+    image = arAddresses[id];
+    openSea = `https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/${releasedGifIds.indexOf(id)+1}`;
+    thumbnail = `/Brutal/img/conlliu/thumbnails/${id}.png`;
+  }
 
   momentsOf39.push({
-    id: id,
+    id,
     title: `Moment #${id}`,
-    image: imagePath,
-    openSea: openSea,
+    image,
+    openSea,
+    thumbnail,
   });
 }
 
