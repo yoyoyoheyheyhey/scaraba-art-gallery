@@ -6,18 +6,24 @@ interface Moment {
   thumbnail: string | undefined;
 }
 
-const releasedGifIds = [1, 10, 7, 29, 6, 34, 12, 19, 37]; // ここにリリース済みのGIFのIDを追加
+const releasedGifIds = [1, 10, 7, 29, 6, 34, 12, 19, 37, 30, 35, 8, 15, 31, 20]; // ここにリリース済みのGIFのIDを追加
 
 const arAddresses: Record<number, string> = {
-  1: 'https://arweave.net/r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
-  10: 'https://arweave.net/sfhr5x2gTCr1SeAMzMpPCkEhZCijbJqqNU12cv_g9f8',
-  7: 'https://arweave.net/O5lXZ54s4IbV6GnvFIaR2F93_kB_Rb2qXJF3R6nRHGY',
-  29: 'https://arweave.net/CC23Mu6JBh_DBAx748E4b1PiA2xinlOpG3BKpq0ZZgQ',
-  6: 'https://arweave.net/9HX3puXGR1LpJUx8jR79tOsx6mwj9Xz63wWlOPDW0N0',
-  34: 'https://arweave.net/T3ruUnVIHdROC3pjcoyFoNbhCdnyjAhIgufzggthsfo',
-  12: 'https://arweave.net/d_hFD8y-sp_Yf4di0sEdGWuEqo4HiTDcMpR4YhLYGzY',
-  19: 'https://arweave.net/FgapHf7ut3urEgcIlxlWtL7g2P_jK8eLkdwqwP0dKd0',
-  37: 'https://arweave.net/WU4KS9TfWLwu_yB0Qu3UtaQ7Rus_5ULJ0lme9zvyDR4',
+  1: 'r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
+  10: 'sfhr5x2gTCr1SeAMzMpPCkEhZCijbJqqNU12cv_g9f8',
+  7: 'O5lXZ54s4IbV6GnvFIaR2F93_kB_Rb2qXJF3R6nRHGY',
+  29: 'CC23Mu6JBh_DBAx748E4b1PiA2xinlOpG3BKpq0ZZgQ',
+  6: '9HX3puXGR1LpJUx8jR79tOsx6mwj9Xz63wWlOPDW0N0',
+  34: 'T3ruUnVIHdROC3pjcoyFoNbhCdnyjAhIgufzggthsfo',
+  12: 'd_hFD8y-sp_Yf4di0sEdGWuEqo4HiTDcMpR4YhLYGzY',
+  19: 'FgapHf7ut3urEgcIlxlWtL7g2P_jK8eLkdwqwP0dKd0',
+  37: 'WU4KS9TfWLwu_yB0Qu3UtaQ7Rus_5ULJ0lme9zvyDR4',
+  30: 'eczCDoQqAtoj4D5e17r2oRnxnthJtRyEjq28dwHpLh8',
+  35: 'kehdmz_UBP2xpQnzyQf3mlYWbWgo1_TFikt87lre_6Q',
+  8: 'hFHuxDLpuuEkdWgLXmmJR2V0Q6ZWMtbUrxKTHuJNtbo',
+  15: '5KUlHu1FBCJ3z147YO8nUAA2b-udAKpVYQOfy9J3oYk',
+  31: 'QjTbFaiTZ1vfdiRz8aGPAMcqq5vpn3fgJ_3u9qFWoxg',
+  20: 'MESDdPc_tRYO5ffb3OXTlOPPHBcb2BGfbDYSFwwaRr8',
 }
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
@@ -26,7 +32,7 @@ for (let id = 1; id <= 39; id++) {
   let openSea;
   let thumbnail;
   if (releasedGifIds.includes(id)) {
-    image = arAddresses[id];
+    image = `https://arweave.net/${arAddresses[id]}`;
     openSea = `https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/${releasedGifIds.indexOf(id)+1}`;
     thumbnail = `/Brutal/img/conlliu/thumbnails/${id}.png`;
   }
