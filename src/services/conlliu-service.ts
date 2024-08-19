@@ -6,7 +6,7 @@ interface Moment {
   thumbnail: string | undefined;
 }
 
-const releasedGifIds = [1, 10, 7, 29, 6, 34, 12, 19, 37, 30, 35, 8, 15, 31, 20]; // ここにリリース済みのGIFのIDを追加
+const releasedGifIds = [1, 10, 7, 29, 6, 34, 12, 19, 37, 30, 35, 8, 15, 31, 20, 26, 17, 36]; // ここにリリース済みのGIFのIDを追加
 
 const arAddresses: Record<number, string> = {
   1: 'r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
@@ -24,6 +24,9 @@ const arAddresses: Record<number, string> = {
   15: '5KUlHu1FBCJ3z147YO8nUAA2b-udAKpVYQOfy9J3oYk',
   31: 'QjTbFaiTZ1vfdiRz8aGPAMcqq5vpn3fgJ_3u9qFWoxg',
   20: 'MESDdPc_tRYO5ffb3OXTlOPPHBcb2BGfbDYSFwwaRr8',
+  26: '5gTCP5WrapIbWISioAPyXiY4wFQOubbgcC6_OVA8ivg',
+  17: 'h6P2lhLT9dxhmSx1R1aOEIh8esfnIZIi2Lr-9onwfsw',
+  36: '-t1iZVBY5uxJVHQ-M533TilouH6k7-d-mTw2kWlr6LM',
 }
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
