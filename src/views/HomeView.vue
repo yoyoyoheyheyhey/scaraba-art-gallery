@@ -96,7 +96,7 @@ function navigateHome(event: MouseEvent) {
           <div class="col-12">
             <div class="row">
               <div class="col-lg-12">
-                <img v-lazy="'/img/conlliu/conlliu.png'" alt="Conlliū" class="object-fit-cover" width="100%">
+                <img v-lazy="{ src: '/img/conlliu/conlliu.png', loading: '/img/utils/spinner.gif' }" alt="Conlliū" class="object-fit-cover" width="100%">
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ function navigateHome(event: MouseEvent) {
               <div class="col-12 d-flex align-items-end flex-wrap">
                 <h2 class="text-transform-none">Conlliū</h2>
                 <div class="d-flex align-items-center ml-3 mb-3">
-                  <img v-lazy="'/img/pfp-icons/le-semeur.jpg'" alt="Shinya SUZUKI" width="24" height="24" class="rounded-circle mr-2 object-fit-cover">
+                  <img v-lazy="{ src: '/img/pfp-icons/le-semeur.jpg', loading: '/img/utils/spinner.gif' }" alt="Shinya SUZUKI" width="24" height="24" class="rounded-circle mr-2 object-fit-cover">
                   <span>Shinya SUZUKI</span>
                 </div>
               </div>
@@ -125,7 +125,7 @@ function navigateHome(event: MouseEvent) {
                 <h4 class="text-transform-none">{{ $t('message.conlliu.subtitle') }}</h4>
                 <a class="cta" target="_blank" href="https://opensea.io/collection/conlliu/overview">
                   <h5 class="text-transform-none d-flex align-items-center">
-                    OpenSea<img v-lazy="'/img/icons/link.png'" width="18" height="18" class="ml-2"/>
+                    OpenSea<img v-lazy="{ src: '/img/icons/link.png', loading: '/img/utils/spinner.gif' }" width="18" height="18" class="ml-2"/>
                   </h5>
                 </a>
                 <p class="mt-4">{{ $t('message.conlliu.subDesc') }}</p>
@@ -162,7 +162,7 @@ function navigateHome(event: MouseEvent) {
                     <section>
                       <a class="cta" target="_blank" href="https://opensea.io/collection/conlliu/overview">
                         <h5 class="text-transform-none d-flex align-items-center">
-                          OpenSea<img v-lazy="'/img/icons/link.png'" width="18" height="18" class="ml-2"/>
+                          OpenSea<img v-lazy="{ src: '/img/icons/link.png', loading: '/img/utils/spinner.gif' }" width="18" height="18" class="ml-2"/>
                         </h5>
                       </a>
                     </section>
@@ -216,7 +216,7 @@ function navigateHome(event: MouseEvent) {
                     <h5>Moment #{{ moment.id }}</h5>
 
                     <a v-if="moment.openSea" target="_blank" :href="moment.openSea">
-                      <p class="d-flex align-items-center">OpenSea<img v-lazy="'/img/icons/link.png'" style="width: 18px" class="ml-2"/></p>
+                      <p class="d-flex align-items-center">OpenSea<img v-lazy="{ src: '/img/icons/link.png', loading: '/img/utils/spinner.gif' }" style="width: 18px" class="ml-2"/></p>
                     </a>
 
                     <p v-else class="text-transform-none d-flex align-items-center">
@@ -314,12 +314,12 @@ function navigateHome(event: MouseEvent) {
     <div id="gallery" class="row elem-border">
       <div class="col-lg-8 order-2 order-lg-1 carousel-wrap">
         <div id="gallery-carousel" class="owl-carousel owl-theme">
-            <div class="img-wrap"><img v-lazy="'/img/scaraba/placeholder-large.png'" alt=""/></div>
-            <div class="img-wrap"><img v-lazy="'/img/scaraba/placeholder-large.png'" alt=""/></div>
-            <div class="img-wrap"><img v-lazy="'/img/scaraba/placeholder-large.png'" alt=""/></div>
-            <div class="img-wrap"><img v-lazy="'/img/scaraba/placeholder-large.png'" alt=""/></div>
-            <div class="img-wrap"><img v-lazy="'/img/scaraba/placeholder-large.png'" alt=""/></div>
-            <div class="img-wrap"><img v-lazy="'/img/scaraba/placeholder-large.png'" alt=""/></div>
+            <div class="img-wrap"><img v-lazy="{ src: '/img/scaraba/placeholder-large.png', loading: '/img/utils/spinner.gif' }" alt=""/></div>
+            <div class="img-wrap"><img v-lazy="{ src: '/img/scaraba/placeholder-large.png', loading: '/img/utils/spinner.gif' }" alt=""/></div>
+            <div class="img-wrap"><img v-lazy="{ src: '/img/scaraba/placeholder-large.png', loading: '/img/utils/spinner.gif' }" alt=""/></div>
+            <div class="img-wrap"><img v-lazy="{ src: '/img/scaraba/placeholder-large.png', loading: '/img/utils/spinner.gif' }" alt=""/></div>
+            <div class="img-wrap"><img v-lazy="{ src: '/img/scaraba/placeholder-large.png', loading: '/img/utils/spinner.gif' }" alt=""/></div>
+            <div class="img-wrap"><img v-lazy="{ src: '/img/scaraba/placeholder-large.png', loading: '/img/utils/spinner.gif' }" alt=""/></div>
         </div>
       </div>
       <div class="col-lg-4 order-1 order-lg-2 gallery-right">
@@ -375,7 +375,7 @@ function navigateHome(event: MouseEvent) {
             <div class="team-wrap">
               <p><span>#1</span></p>
               <div>
-                <img v-lazy="'/img/pfp-icons/le-semeur.jpg'" alt="">
+                <img v-lazy="{ src: '/img/pfp-icons/le-semeur.jpg', loading: '/img/utils/spinner.gif' }" alt="">
               </div>
               <span class="team-member-name">
               <a class="btl-anchor" href="https://www.instagram.com/aon_polo" target="_blank" rel="noopener noreferrer">Shinya SUZUKI</a>
@@ -387,7 +387,7 @@ function navigateHome(event: MouseEvent) {
             <div class="team-wrap">
               <p><span>#2</span></p>
               <div>
-                <img v-lazy="'/img/scaraba/placeholder.png'" alt="">
+                <img v-lazy="{ src: '/img/scaraba/placeholder.png', loading: '/img/utils/spinner.gif' }" alt="">
               </div>
               <span class="team-member-name">
               <a class="btl-anchor" href="#">Awaiting</a>
@@ -399,7 +399,7 @@ function navigateHome(event: MouseEvent) {
             <div class="team-wrap">
               <p><span>#3</span></p>
               <div>
-                <img v-lazy="'/img/scaraba/placeholder.png'" alt="">
+                <img v-lazy="{ src: '/img/scaraba/placeholder.png', loading: '/img/utils/spinner.gif' }" alt="">
               </div>
               <span class="team-member-name">
               <a class="btl-anchor" href="#">Awaiting</a>
@@ -411,7 +411,7 @@ function navigateHome(event: MouseEvent) {
             <div class="team-wrap">
               <p><span>#4</span></p>
               <div>
-                <img v-lazy="'/img/scaraba/placeholder.png'" alt="">
+                <img v-lazy="{ src: '/img/scaraba/placeholder.png', loading: '/img/utils/spinner.gif' }" alt="">
               </div>
               <span class="team-member-name">
               <a class="btl-anchor" href="#">Awaiting</a>
@@ -423,7 +423,7 @@ function navigateHome(event: MouseEvent) {
             <div class="team-wrap">
               <p><span>#5</span></p>
               <div>
-                <img v-lazy="'/img/scaraba/placeholder.png'" alt="">
+                <img v-lazy="{ src: '/img/scaraba/placeholder.png', loading: '/img/utils/spinner.gif' }" alt="">
               </div>
               <span class="team-member-name">
               <a class="btl-anchor" href="#">Awaiting</a>
@@ -435,7 +435,7 @@ function navigateHome(event: MouseEvent) {
             <div class="team-wrap">
               <p><span>#6</span></p>
               <div>
-                <img v-lazy="'/img/scaraba/placeholder.png'" alt="">
+                <img v-lazy="{ src: '/img/scaraba/placeholder.png', loading: '/img/utils/spinner.gif' }" alt="">
               </div>
               <span class="team-member-name">
               <a class="btl-anchor" href="#">Awaiting</a>
