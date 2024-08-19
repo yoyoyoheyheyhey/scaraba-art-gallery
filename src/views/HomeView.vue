@@ -125,7 +125,7 @@ function navigateHome(event: MouseEvent) {
                 <h4 class="text-transform-none">{{ $t('message.conlliu.subtitle') }}</h4>
                 <a class="cta" target="_blank" href="https://opensea.io/collection/conlliu/overview">
                   <h5 class="text-transform-none d-flex align-items-center">
-                    OpenSea<img v-lazy="{ src: '/img/icons/link.png', loading: '/img/utils/spinner.gif' }" width="18" height="18" class="ml-2"/>
+                    OpenSea<img src="/img/icons/link.png" width="18" height="18" class="ml-2"/>
                   </h5>
                 </a>
                 <p class="mt-4">{{ $t('message.conlliu.subDesc') }}</p>
@@ -162,7 +162,7 @@ function navigateHome(event: MouseEvent) {
                     <section>
                       <a class="cta" target="_blank" href="https://opensea.io/collection/conlliu/overview">
                         <h5 class="text-transform-none d-flex align-items-center">
-                          OpenSea<img v-lazy="{ src: '/img/icons/link.png', loading: '/img/utils/spinner.gif' }" width="18" height="18" class="ml-2"/>
+                          OpenSea<img src="/img/icons/link.png" width="18" height="18" class="ml-2"/>
                         </h5>
                       </a>
                     </section>
@@ -216,7 +216,7 @@ function navigateHome(event: MouseEvent) {
                     <h5>Moment #{{ moment.id }}</h5>
 
                     <a v-if="moment.openSea" target="_blank" :href="moment.openSea">
-                      <p class="d-flex align-items-center">OpenSea<img v-lazy="{ src: '/img/icons/link.png', loading: '/img/utils/spinner.gif' }" style="width: 18px" class="ml-2"/></p>
+                      <p class="d-flex align-items-center">OpenSea<img src="/img/icons/link.png"  style="width: 18px" class="ml-2"/></p>
                     </a>
 
                     <p v-else class="text-transform-none d-flex align-items-center">
