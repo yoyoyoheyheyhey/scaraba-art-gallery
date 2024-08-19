@@ -28,13 +28,13 @@ const arAddresses: Record<number, string> = {
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
   // IDがreleasedGifIds配列に含まれているかどうかで画像のパスを切り替え
-  let image = '/Brutal/img/placeholder.png';
+  let image = '/img/scaraba/placeholder.png';
   let openSea;
   let thumbnail;
   if (releasedGifIds.includes(id)) {
     image = `https://arweave.net/${arAddresses[id]}`;
     openSea = `https://opensea.io/assets/ethereum/0x81acc0d528fae8f9c17963ff47538582f4886386/${releasedGifIds.indexOf(id)+1}`;
-    thumbnail = `/Brutal/img/conlliu/thumbnails/${id}.png`;
+    thumbnail = `/img/conlliu/thumbnails/${id}.png`;
   }
 
   momentsOf39.push({
