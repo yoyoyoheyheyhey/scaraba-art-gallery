@@ -209,8 +209,8 @@ function navigateHome(event: MouseEvent) {
               v-for="moment in momentsOf39"
               :key="`moment-${moment.id}`"
               :id="`product-${moment.id}`"
-              class="product-carousel-item vertical-video-ratio object-fit-cover"
-              :style="`background-image: url(${moment.image});`"
+              class="product-carousel-item vertical-video-ratio object-fit-cover moments-detail"
+              v-lazy-background="{ src: moment.image, loading: '/img/utils/spinner.gif' }"
             >
                 <div class="product-description">
                     <h5>Moment #{{ moment.id }}</h5>
@@ -528,5 +528,9 @@ function navigateHome(event: MouseEvent) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.moments-detail.loading {
+  background-size: auto !important;
 }
 </style>
