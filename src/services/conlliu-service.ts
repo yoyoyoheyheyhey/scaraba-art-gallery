@@ -7,7 +7,7 @@ interface Moment {
 }
 
 // ここにリリース済みのGIFのIDを追加
-const releasedGifIds = [1, 10, 7, 29, 6, 34, 12, 19, 37, 30, 35, 8, 15, 31, 20, 26, 17, 36, 14, 11, 3, 22, 24, 18, 23, 33, 2, 32, 5, 28, 4, 38, 16];
+const releasedGifIds = [1, 10, 7, 29, 6, 34, 12, 19, 37, 30, 35, 8, 15, 31, 20, 26, 17, 36, 14, 11, 3, 22, 24, 18, 23, 33, 2, 32, 5, 28, 4, 38, 16, 9, 25, 21, 13, 27, 39];
 
 const arAddresses: Record<number, string> = {
   1: 'r_kwzt-eU1EMKabRrlfwPgs0yFCFQ3WDGD3hKMSAeKk',
@@ -43,6 +43,12 @@ const arAddresses: Record<number, string> = {
   4: 'UBQLZYbrmWAxe7pYTlTJ0lOFGO0Hmn87iEEOJrLQmqU',
   38: 'urK8vBjAIqQYiS3t_AhXaZZ5CkLmoWVzTcQIEc9As0k',
   16: '4Vd8IzYHyZhF8Z-ETwdeL2MEdSlJ8zR2ERwYwLXycjw',
+  9: 'VPSczywyBstgOTwS3A2_jhLoZ3Ew5KerUlVBESy3GGI',
+  25: 'ycQiTCrMfiZyP9yH-awHY6PqgQkARxUG10mw-HOaMw8',
+  21: 'h5l8hydwQ3UU0vBuBJvrSOZSPr6qxT-qHcGn6kcTXFI',
+  13: '6Dfv_TIwl4pIPDswPWVKXkDBq44lGb7yGpon1-SZRso',
+  27: 'IkAeGn6Z6KljL8cGrmzlPD5GTwFwucmv1o4Ra6Dc1zw',
+  39: 'WzK604wY1fQ5BMtJbe6q9DSSdUe9uuFlJ7a3HMzCdtI',
 }
 const momentsOf39: Moment[] = [];
 for (let id = 1; id <= 39; id++) {
